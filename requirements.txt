@@ -1,0 +1,4 @@
+langgraph>=1.2
+langchain-openai>=1.0
+pydantic-ai-slim[openai]>=2.50
+openai-agents>=0.23

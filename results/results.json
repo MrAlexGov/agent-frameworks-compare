@@ -1,0 +1,3163 @@
+[
+  {
+    "framework": "langgraph",
+    "model": "google/gemini-3-flash-preview",
+    "n": 32,
+    "accuracy": 1.0,
+    "errors": 0,
+    "enough_tool_calls": 1.0,
+    "avg_tool_calls": 1.62,
+    "latency_p50_s": 5.4,
+    "rows": [
+      {
+        "q": "Сколько стоит тариф Про в месяц?",
+        "rep": 0,
+        "ok": true,
+        "tool_calls": 1,
+        "enough_tools": true,
+        "latency_s": 4.55,
+        "error": null,
+        "answer": {
+          "answer": "Тариф «Про» стоит 2 490 ₽ в месяц.",
+          "value": 2490.0,
+          "sources": [
+            "tariffs"
+          ]
+        }
+      },
+      {
+        "q": "Сколько vCPU на тарифе Бизнес?",
+        "rep": 0,
+        "ok": true,
+        "tool_calls": 1,
+        "enough_tools": true,
+        "latency_s": 3.93,
+        "error": null,
+        "answer": {
+          "answer": "На тарифе «Бизнес» предоставляется 8 vCPU.",
+          "value": 8.0,
+          "sources": [
+            "tariffs"
+          ]
+        }
+      },
+      {
+        "q": "Какая доступность по SLA у тарифа Старт?",
+        "rep": 0,
+        "ok": true,
+        "tool_calls": 1,
+        "enough_tools": true,
+        "latency_s": 4.0,
+        "error": null,
+        "answer": {
+          "answer": "99,5%",
+          "value": 99.5,
+          "sources": [
+            "sla"
+          ]
+        }
+      },
+      {
+        "q": "В каком регионе доступны A100?",
+        "rep": 0,
+        "ok": true,
+        "tool_calls": 1,
+        "enough_tools": true,
+        "latency_s": 4.07,
+        "error": null,
+        "answer": {
+          "answer": "Москва (зона доступности msk-2)",
+          "value": null,
+          "sources": [
+            "regions"
+          ]
+        }
+      },
+      {
+        "q": "За сколько отвечает поддержка на тарифе Про?",
+        "rep": 0,
+        "ok": true,
+        "tool_calls": 1,
+        "enough_tools": true,
+        "latency_s": 4.22,
+        "error": null,
+        "answer": {
+          "answer": "На тарифе «Про» поддержка отвечает в течение 4 часов.",
+          "value": 4.0,
+          "sources": [
+            "support"
+          ]
+        }
+      },
+      {
+        "q": "Сколько стоит год тарифа Про при оплате сразу за 12 месяцев?",
+        "rep": 0,
+        "ok": true,
+        "tool_calls": 2,
+        "enough_tools": true,
+        "latency_s": 5.97,
+        "error": null,
+        "answer": {
+          "answer": "Стоимость тарифа «Про» при оплате за 12 месяцев со скидкой 15% составляет 25 398 рублей.",
+          "value": 25398.0,
+          "sources": [
+            "tariffs"
+          ]
+        }
+      },
+      {
+        "q": "Сколько стоит полгода тарифа Бизнес при оплате за 6 месяцев?",
+        "rep": 0,
+        "ok": true,
+        "tool_calls": 2,
+        "enough_tools": true,
+        "latency_s": 5.59,
+        "error": null,
+        "answer": {
+          "answer": "Стоимость тарифа «Бизнес» при оплате за 6 месяцев составляет 32 922 рубля (с учетом скидки 7%).",
+          "value": 32922.0,
+          "sources": [
+            "tariffs"
+          ]
+        }
+      },
+      {
+        "q": "Сколько будет стоить 10 часов аренды A100?",
+        "rep": 0,
+        "ok": true,
+        "tool_calls": 2,
+        "enough_tools": true,
+        "latency_s": 5.44,
+        "error": null,
+        "answer": {
+          "answer": "10 часов аренды NVIDIA A100 80GB будут стоить 2890 ₽ (из расчета 289 ₽/час).",
+          "value": 2890.0,
+          "sources": [
+            "gpu"
+          ]
+        }
+      },
+      {
+        "q": "Сколько стоит хранить 500 ГБ в S3 месяц?",
+        "rep": 0,
+        "ok": true,
+        "tool_calls": 2,
+        "enough_tools": true,
+        "latency_s": 5.53,
+        "error": null,
+        "answer": {
+          "answer": "Хранение 500 ГБ в S3 стоит 950 рублей в месяц (из расчета 1,9 ₽ за 1 ГБ).",
+          "value": 950.0,
+          "sources": [
+            "s3"
+          ]
+        }
+      },
+      {
+        "q": "Сколько стоит отдать 300 ГБ исходящего трафика из S3 за месяц (только трафик)?",
+        "rep": 0,
+        "ok": true,
+        "tool_calls": 2,
+        "enough_tools": true,
+        "latency_s": 5.94,
+        "error": null,
+        "answer": {
+          "answer": "200 рублей",
+          "value": 200.0,
+          "sources": [
+            "s3"
+          ]
+        }
+      },
+      {
+        "q": "Хранение 30 дней снапшотов объёмом 200 ГБ — сколько в месяц?",
+        "rep": 0,
+        "ok": true,
+        "tool_calls": 2,
+        "enough_tools": true,
+        "latency_s": 5.38,
+        "error": null,
+        "answer": {
+          "answer": "600 рублей в месяц",
+          "value": 600.0,
+          "sources": [
+            "backup"
+          ]
+        }
+      },
+      {
+        "q": "Насколько дороже час L4, чем час T4, в рублях?",
+        "rep": 0,
+        "ok": true,
+        "tool_calls": 2,
+        "enough_tools": true,
+        "latency_s": 5.01,
+        "error": null,
+        "answer": {
+          "answer": "Час L4 дороже часа T4 на 23 рубля.",
+          "value": 23.0,
+          "sources": [
+            "gpu"
+          ]
+        }
+      },
+      {
+        "q": "Доступность на тарифе Бизнес упала до 99,7%. Какая компенсация в рублях?",
+        "rep": 0,
+        "ok": true,
+        "tool_calls": 2,
+        "enough_tools": true,
+        "latency_s": 6.5,
+        "error": null,
+        "answer": {
+          "answer": "1770 рублей",
+          "value": 1770.0,
+          "sources": [
+            "sla",
+            "tariffs"
+          ]
+        }
+      },
+      {
+        "q": "Можно ли арендовать GPU H100?",
+        "rep": 0,
+        "ok": true,
+        "tool_calls": 2,
+        "enough_tools": true,
+        "latency_s": 6.69,
+        "error": null,
+        "answer": {
+          "answer": "В базе знаний нет информации о возможности аренды GPU NVIDIA H100. На данный момент доступны модели NVIDIA T4 (38 ₽/час), NVIDIA L4 (61 ₽/час) и NVIDIA A100 80GB (289 ₽/час).",
+          "value": null,
+          "sources": [
+            "gpu"
+          ]
+        }
+      },
+      {
+        "q": "Сколько стоит тариф Старт и Про вместе в месяц?",
+        "rep": 0,
+        "ok": true,
+        "tool_calls": 2,
+        "enough_tools": true,
+        "latency_s": 5.38,
+        "error": null,
+        "answer": {
+          "answer": "Совокупная стоимость тарифов «Старт» (990 ₽/мес) и «Про» (2490 ₽/мес) составляет 3480 рублей в месяц.",
+          "value": 3480.0,
+          "sources": [
+            "tariffs"
+          ]
+        }
+      },
+      {
+        "q": "Есть ли у Облачко регион в Казани?",
+        "rep": 0,
+        "ok": true,
+        "tool_calls": 1,
+        "enough_tools": true,
+        "latency_s": 4.17,
+        "error": null,
+        "answer": {
+          "answer": "Нет, у провайдера «Облачко» нет региона в Казани. Доступные локации: Москва, Санкт-Петербург и Новосибирск.",
+          "value": null,
+          "sources": [
+            "regions"
+          ]
+        }
+      },
+      {
+        "q": "Сколько стоит тариф Про в месяц?",
+        "rep": 1,
+        "ok": true,
+        "tool_calls": 1,
+        "enough_tools": true,
+        "latency_s": 3.74,
+        "error": null,
+        "answer": {
+          "answer": "Тариф «Про» стоит 2490 ₽ в месяц.",
+          "value": 2490.0,
+          "sources": [
+            "tariffs"
+          ]
+        }
+      },
+      {
+        "q": "Сколько vCPU на тарифе Бизнес?",
+        "rep": 1,
+        "ok": true,
+        "tool_calls": 1,
+        "enough_tools": true,
+        "latency_s": 3.88,
+        "error": null,
+        "answer": {
+          "answer": "8 vCPU",
+          "value": 8.0,
+          "sources": [
+            "tariffs"
+          ]
+        }
+      },
+      {
+        "q": "Какая доступность по SLA у тарифа Старт?",
+        "rep": 1,
+        "ok": true,
+        "tool_calls": 1,
+        "enough_tools": true,
+        "latency_s": 4.06,
+        "error": null,
+        "answer": {
+          "answer": "99,5%",
+          "value": 99.5,
+          "sources": [
+            "sla"
+          ]
+        }
+      },
+      {
+        "q": "В каком регионе доступны A100?",
+        "rep": 1,
+        "ok": true,
+        "tool_calls": 1,
+        "enough_tools": true,
+        "latency_s": 4.92,
+        "error": null,
+        "answer": {
+          "answer": "Графические ускорители NVIDIA A100 доступны только в регионе Москва (зона доступности msk-2).",
+          "value": null,
+          "sources": [
+            "regions"
+          ]
+        }
+      },
+      {
+        "q": "За сколько отвечает поддержка на тарифе Про?",
+        "rep": 1,
+        "ok": true,
+        "tool_calls": 1,
+        "enough_tools": true,
+        "latency_s": 4.28,
+        "error": null,
+        "answer": {
+          "answer": "На тарифе «Про» поддержка отвечает в течение 4 часов.",
+          "value": 4.0,
+          "sources": [
+            "support"
+          ]
+        }
+      },
+      {
+        "q": "Сколько стоит год тарифа Про при оплате сразу за 12 месяцев?",
+        "rep": 1,
+        "ok": true,
+        "tool_calls": 2,
+        "enough_tools": true,
+        "latency_s": 5.72,
+        "error": null,
+        "answer": {
+          "answer": "Стоимость тарифа «Про» при оплате сразу за 12 месяцев составляет 25 398 рублей (с учетом скидки 15%).",
+          "value": 25398.0,
+          "sources": [
+            "tariffs"
+          ]
+        }
+      },
+      {
+        "q": "Сколько стоит полгода тарифа Бизнес при оплате за 6 месяцев?",
+        "rep": 1,
+        "ok": true,
+        "tool_calls": 2,
+        "enough_tools": true,
+        "latency_s": 5.67,
+        "error": null,
+        "answer": {
+          "answer": "32 922 ₽",
+          "value": 32922.0,
+          "sources": [
+            "tariffs"
+          ]
+        }
+      },
+      {
+        "q": "Сколько будет стоить 10 часов аренды A100?",
+        "rep": 1,
+        "ok": true,
+        "tool_calls": 2,
+        "enough_tools": true,
+        "latency_s": 5.6,
+        "error": null,
+        "answer": {
+          "answer": "10 часов аренды NVIDIA A100 80GB будут стоить 2890 рублей (из расчета 289 ₽/час).",
+          "value": 2890.0,
+          "sources": [
+            "gpu"
+          ]
+        }
+      },
+      {
+        "q": "Сколько стоит хранить 500 ГБ в S3 месяц?",
+        "rep": 1,
+        "ok": true,
+        "tool_calls": 2,
+        "enough_tools": true,
+        "latency_s": 5.63,
+        "error": null,
+        "answer": {
+          "answer": "Хранение 500 ГБ в S3 стоит 950 рублей в месяц (из расчета 1,9 ₽ за 1 ГБ).",
+          "value": 950.0,
+          "sources": [
+            "s3"
+          ]
+        }
+      },
+      {
+        "q": "Сколько стоит отдать 300 ГБ исходящего трафика из S3 за месяц (только трафик)?",
+        "rep": 1,
+        "ok": true,
+        "tool_calls": 2,
+        "enough_tools": true,
+        "latency_s": 5.45,
+        "error": null,
+        "answer": {
+          "answer": "200 рублей",
+          "value": 200.0,
+          "sources": [
+            "s3"
+          ]
+        }
+      },
+      {
+        "q": "Хранение 30 дней снапшотов объёмом 200 ГБ — сколько в месяц?",
+        "rep": 1,
+        "ok": true,
+        "tool_calls": 2,
+        "enough_tools": true,
+        "latency_s": 5.6,
+        "error": null,
+        "answer": {
+          "answer": "600 рублей в месяц",
+          "value": 600.0,
+          "sources": [
+            "backup"
+          ]
+        }
+      },
+      {
+        "q": "Насколько дороже час L4, чем час T4, в рублях?",
+        "rep": 1,
+        "ok": true,
+        "tool_calls": 2,
+        "enough_tools": true,
+        "latency_s": 5.42,
+        "error": null,
+        "answer": {
+          "answer": "Час аренды NVIDIA L4 дороже часа NVIDIA T4 на 23 рубля.",
+          "value": 23.0,
+          "sources": [
+            "gpu"
+          ]
+        }
+      },
+      {
+        "q": "Доступность на тарифе Бизнес упала до 99,7%. Какая компенсация в рублях?",
+        "rep": 1,
+        "ok": true,
+        "tool_calls": 2,
+        "enough_tools": true,
+        "latency_s": 7.5,
+        "error": null,
+        "answer": {
+          "answer": "Сумма компенсации составит 1770 рублей. На тарифе «Бизнес» (5900 руб/мес) SLA составляет 99,95%. Падение до 99,7% означает снижение на 0,25%, что включает 3 полных или частичных интервала по 0,1%. За каждый интервал полагается 10% от стоимости тарифа (30% в сумме).",
+          "value": 1770.0,
+          "sources": [
+            "sla",
+            "tariffs"
+          ]
+        }
+      },
+      {
+        "q": "Можно ли арендовать GPU H100?",
+        "rep": 1,
+        "ok": true,
+        "tool_calls": 2,
+        "enough_tools": true,
+        "latency_s": 6.35,
+        "error": null,
+        "answer": {
+          "answer": "На данный момент аренда GPU NVIDIA H100 в «Облачко» недоступна. Для заказа доступны модели NVIDIA T4, L4 и A100 80GB.",
+          "value": null,
+          "sources": [
+            "gpu"
+          ]
+        }
+      },
+      {
+        "q": "Сколько стоит тариф Старт и Про вместе в месяц?",
+        "rep": 1,
+        "ok": true,
+        "tool_calls": 2,
+        "enough_tools": true,
+        "latency_s": 5.28,
+        "error": null,
+        "answer": {
+          "answer": "3480 рублей в месяц",
+          "value": 3480.0,
+          "sources": [
+            "tariffs"
+          ]
+        }
+      },
+      {
+        "q": "Есть ли у Облачко регион в Казани?",
+        "rep": 1,
+        "ok": true,
+        "tool_calls": 1,
+        "enough_tools": true,
+        "latency_s": 4.25,
+        "error": null,
+        "answer": {
+          "answer": "Нет, у провайдера «Облачко» нет региона в Казани. Доступные локации: Москва, Санкт-Петербург и Новосибирск.",
+          "value": null,
+          "sources": [
+            "regions"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "framework": "pydantic-ai",
+    "model": "google/gemini-3-flash-preview",
+    "n": 32,
+    "accuracy": 1.0,
+    "errors": 0,
+    "enough_tool_calls": 1.0,
+    "avg_tool_calls": 1.56,
+    "latency_p50_s": 3.48,
+    "rows": [
+      {
+        "q": "Сколько стоит тариф Про в месяц?",
+        "rep": 0,
+        "ok": true,
+        "tool_calls": 1,
+        "enough_tools": true,
+        "latency_s": 2.5,
+        "error": null,
+        "answer": {
+          "answer": "Стоимость тарифа «Про» составляет 2490 рублей в месяц.",
+          "value": 2490.0,
+          "sources": [
+            "tariffs"
+          ]
+        }
+      },
+      {
+        "q": "Сколько vCPU на тарифе Бизнес?",
+        "rep": 0,
+        "ok": true,
+        "tool_calls": 1,
+        "enough_tools": true,
+        "latency_s": 2.09,
+        "error": null,
+        "answer": {
+          "answer": "На тарифе «Бизнес» предоставляется 8 vCPU.",
+          "value": 8.0,
+          "sources": [
+            "tariffs"
+          ]
+        }
+      },
+      {
+        "q": "Какая доступность по SLA у тарифа Старт?",
+        "rep": 0,
+        "ok": true,
+        "tool_calls": 1,
+        "enough_tools": true,
+        "latency_s": 2.35,
+        "error": null,
+        "answer": {
+          "answer": "Доступность по SLA у тарифа «Старт» составляет 99,5%.",
+          "value": 99.5,
+          "sources": [
+            "sla"
+          ]
+        }
+      },
+      {
+        "q": "В каком регионе доступны A100?",
+        "rep": 0,
+        "ok": true,
+        "tool_calls": 1,
+        "enough_tools": true,
+        "latency_s": 2.48,
+        "error": null,
+        "answer": {
+          "answer": "Графические ускорители NVIDIA A100 доступны только в регионе msk-2 (Москва).",
+          "value": null,
+          "sources": [
+            "regions"
+          ]
+        }
+      },
+      {
+        "q": "За сколько отвечает поддержка на тарифе Про?",
+        "rep": 0,
+        "ok": true,
+        "tool_calls": 1,
+        "enough_tools": true,
+        "latency_s": 2.57,
+        "error": null,
+        "answer": {
+          "answer": "На тарифе Про поддержка отвечает в течение 4 часов. Связаться можно через тикеты или чат.",
+          "value": null,
+          "sources": [
+            "support"
+          ]
+        }
+      },
+      {
+        "q": "Сколько стоит год тарифа Про при оплате сразу за 12 месяцев?",
+        "rep": 0,
+        "ok": true,
+        "tool_calls": 2,
+        "enough_tools": true,
+        "latency_s": 3.95,
+        "error": null,
+        "answer": {
+          "answer": "Год тарифа «Про» при оплате сразу за 12 месяцев стоит 25 398 ₽. Стоимость месяца без скидки составляет 2490 ₽, а при годовой оплате предоставляется скидка 15%.",
+          "value": 25398.0,
+          "sources": [
+            "tariffs"
+          ]
+        }
+      },
+      {
+        "q": "Сколько стоит полгода тарифа Бизнес при оплате за 6 месяцев?",
+        "rep": 0,
+        "ok": true,
+        "tool_calls": 2,
+        "enough_tools": true,
+        "latency_s": 4.31,
+        "error": null,
+        "answer": {
+          "answer": "Полгода тарифа «Бизнес» при оплате за 6 месяцев стоят 32 922 рубля. Стоимость месяца составляет 5 900 рублей, а при оплате за полгода предоставляется скидка 7%.",
+          "value": 32922.0,
+          "sources": [
+            "tariffs"
+          ]
+        }
+      },
+      {
+        "q": "Сколько будет стоить 10 часов аренды A100?",
+        "rep": 0,
+        "ok": true,
+        "tool_calls": 2,
+        "enough_tools": true,
+        "latency_s": 3.5,
+        "error": null,
+        "answer": {
+          "answer": "Аренда NVIDIA A100 80GB стоит 289 ₽/час. За 10 часов стоимость составит 2890 ₽.",
+          "value": 2890.0,
+          "sources": [
+            "gpu"
+          ]
+        }
+      },
+      {
+        "q": "Сколько стоит хранить 500 ГБ в S3 месяц?",
+        "rep": 0,
+        "ok": true,
+        "tool_calls": 2,
+        "enough_tools": true,
+        "latency_s": 4.11,
+        "error": null,
+        "answer": {
+          "answer": "Хранение 500 ГБ в объектном хранилище S3 обойдется в 950 рублей в месяц (из расчета 1,9 ₽ за ГБ). Входящий трафик бесплатный, а первые 100 ГБ исходящего трафика также включены в стоимость.",
+          "value": 950.0,
+          "sources": [
+            "s3"
+          ]
+        }
+      },
+      {
+        "q": "Сколько стоит отдать 300 ГБ исходящего трафика из S3 за месяц (только трафик)?",
+        "rep": 0,
+        "ok": true,
+        "tool_calls": 2,
+        "enough_tools": true,
+        "latency_s": 4.38,
+        "error": null,
+        "answer": {
+          "answer": "Стоимость 300 ГБ исходящего трафика из S3 составит 200 рублей в месяц. Первые 100 ГБ предоставляются бесплатно, а каждый последующий ГБ стоит 1 рубль.",
+          "value": 200.0,
+          "sources": [
+            "s3"
+          ]
+        }
+      },
+      {
+        "q": "Хранение 30 дней снапшотов объёмом 200 ГБ — сколько в месяц?",
+        "rep": 0,
+        "ok": true,
+        "tool_calls": 2,
+        "enough_tools": true,
+        "latency_s": 3.55,
+        "error": null,
+        "answer": {
+          "answer": "Хранение снапшотов объёмом 200 ГБ в течение 30 дней будет стоить 600 рублей в месяц (из расчета 3 ₽ за ГБ).",
+          "value": 600.0,
+          "sources": [
+            "backup"
+          ]
+        }
+      },
+      {
+        "q": "Насколько дороже час L4, чем час T4, в рублях?",
+        "rep": 0,
+        "ok": true,
+        "tool_calls": 2,
+        "enough_tools": true,
+        "latency_s": 3.49,
+        "error": null,
+        "answer": {
+          "answer": "Час аренды NVIDIA L4 дороже часа NVIDIA T4 на 23 рубля (61 ₽ против 38 ₽).",
+          "value": 23.0,
+          "sources": [
+            "gpu"
+          ]
+        }
+      },
+      {
+        "q": "Доступность на тарифе Бизнес упала до 99,7%. Какая компенсация в рублях?",
+        "rep": 0,
+        "ok": true,
+        "tool_calls": 2,
+        "enough_tools": true,
+        "latency_s": 5.62,
+        "error": null,
+        "answer": {
+          "answer": "Для тарифа «Бизнес» (стоимость 5900 ₽/мес) гарантированная доступность составляет 99,95%. При падении до 99,7% отклонение составляет 0,25%. Согласно правилам SLA, компенсация составляет 10% от месячной стоимости за каждые начатые 0,1% отклонения. В данном случае это 3 интервала по 0,1%, что дает 30% компенсации. \n\nСумма компенсации: 5900 ₽ × 30% = 1770 ₽.",
+          "value": 1770.0,
+          "sources": [
+            "tariffs",
+            "sla"
+          ]
+        }
+      },
+      {
+        "q": "Можно ли арендовать GPU H100?",
+        "rep": 0,
+        "ok": true,
+        "tool_calls": 1,
+        "enough_tools": true,
+        "latency_s": 2.99,
+        "error": null,
+        "answer": {
+          "answer": "К сожалению, в данный момент аренда GPU NVIDIA H100 недоступна. В нашем облаке вы можете арендовать следующие модели GPU: NVIDIA T4, NVIDIA L4 и NVIDIA A100 80GB.",
+          "value": null,
+          "sources": [
+            "gpu"
+          ]
+        }
+      },
+      {
+        "q": "Сколько стоит тариф Старт и Про вместе в месяц?",
+        "rep": 0,
+        "ok": true,
+        "tool_calls": 2,
+        "enough_tools": true,
+        "latency_s": 3.8,
+        "error": null,
+        "answer": {
+          "answer": "Стоимость тарифа «Старт» составляет 990 ₽/мес, а тарифа «Про» — 2490 ₽/мес. Вместе они стоят 3480 ₽ в месяц.",
+          "value": 3480.0,
+          "sources": [
+            "tariffs"
+          ]
+        }
+      },
+      {
+        "q": "Есть ли у Облачко регион в Казани?",
+        "rep": 0,
+        "ok": true,
+        "tool_calls": 1,
+        "enough_tools": true,
+        "latency_s": 2.32,
+        "error": null,
+        "answer": {
+          "answer": "Нет, у провайдера «Облачко» нет региона в Казани. Доступные регионы: Москва (msk-1, msk-2), Санкт-Петербург (spb-1) и Новосибирск (nsk-1).",
+          "value": null,
+          "sources": [
+            "regions"
+          ]
+        }
+      },
+      {
+        "q": "Сколько стоит тариф Про в месяц?",
+        "rep": 1,
+        "ok": true,
+        "tool_calls": 1,
+        "enough_tools": true,
+        "latency_s": 1.94,
+        "error": null,
+        "answer": {
+          "answer": "Стоимость тарифа «Про» составляет 2490 рублей в месяц.",
+          "value": 2490.0,
+          "sources": [
+            "tariffs"
+          ]
+        }
+      },
+      {
+        "q": "Сколько vCPU на тарифе Бизнес?",
+        "rep": 1,
+        "ok": true,
+        "tool_calls": 1,
+        "enough_tools": true,
+        "latency_s": 2.37,
+        "error": null,
+        "answer": {
+          "answer": "На тарифе «Бизнес» предоставляется 8 vCPU.",
+          "value": 8.0,
+          "sources": [
+            "tariffs"
+          ]
+        }
+      },
+      {
+        "q": "Какая доступность по SLA у тарифа Старт?",
+        "rep": 1,
+        "ok": true,
+        "tool_calls": 1,
+        "enough_tools": true,
+        "latency_s": 2.36,
+        "error": null,
+        "answer": {
+          "answer": "Доступность по SLA у тарифа «Старт» составляет 99,5%.",
+          "value": 99.5,
+          "sources": [
+            "sla"
+          ]
+        }
+      },
+      {
+        "q": "В каком регионе доступны A100?",
+        "rep": 1,
+        "ok": true,
+        "tool_calls": 1,
+        "enough_tools": true,
+        "latency_s": 2.54,
+        "error": null,
+        "answer": {
+          "answer": "Графические ускорители NVIDIA A100 доступны только в регионе msk-2 (Москва).",
+          "value": null,
+          "sources": [
+            "regions"
+          ]
+        }
+      },
+      {
+        "q": "За сколько отвечает поддержка на тарифе Про?",
+        "rep": 1,
+        "ok": true,
+        "tool_calls": 1,
+        "enough_tools": true,
+        "latency_s": 2.7,
+        "error": null,
+        "answer": {
+          "answer": "На тарифе Про поддержка отвечает в течение 4 часов. Связаться можно через тикеты или в чате.",
+          "value": 4.0,
+          "sources": [
+            "support"
+          ]
+        }
+      },
+      {
+        "q": "Сколько стоит год тарифа Про при оплате сразу за 12 месяцев?",
+        "rep": 1,
+        "ok": true,
+        "tool_calls": 2,
+        "enough_tools": true,
+        "latency_s": 4.07,
+        "error": null,
+        "answer": {
+          "answer": "Стоимость тарифа «Про» при оплате за 12 месяцев составляет 25 398 ₽. Это с учетом 15% скидки от базовой цены 2490 ₽/мес.",
+          "value": 25398.0,
+          "sources": [
+            "tariffs"
+          ]
+        }
+      },
+      {
+        "q": "Сколько стоит полгода тарифа Бизнес при оплате за 6 месяцев?",
+        "rep": 1,
+        "ok": true,
+        "tool_calls": 2,
+        "enough_tools": true,
+        "latency_s": 4.23,
+        "error": null,
+        "answer": {
+          "answer": "Полгода тарифа «Бизнес» при оплате за 6 месяцев стоят 32 922 рубля. Стоимость месяца составляет 5 900 рублей, а при оплате за полгода предоставляется скидка 7%.",
+          "value": 32922.0,
+          "sources": [
+            "tariffs"
+          ]
+        }
+      },
+      {
+        "q": "Сколько будет стоить 10 часов аренды A100?",
+        "rep": 1,
+        "ok": true,
+        "tool_calls": 2,
+        "enough_tools": true,
+        "latency_s": 3.58,
+        "error": null,
+        "answer": {
+          "answer": "Аренда NVIDIA A100 80GB стоит 289 ₽/час. За 10 часов стоимость составит 2890 ₽.",
+          "value": 2890.0,
+          "sources": [
+            "gpu"
+          ]
+        }
+      },
+      {
+        "q": "Сколько стоит хранить 500 ГБ в S3 месяц?",
+        "rep": 1,
+        "ok": true,
+        "tool_calls": 2,
+        "enough_tools": true,
+        "latency_s": 4.25,
+        "error": null,
+        "answer": {
+          "answer": "Хранение 500 ГБ в объектном хранилище S3 будет стоить 950 рублей в месяц (из расчета 1,9 ₽ за 1 ГБ). Входящий трафик бесплатен, а исходящий — 1 ₽ за ГБ сверх включенных 100 ГБ.",
+          "value": 950.0,
+          "sources": [
+            "s3"
+          ]
+        }
+      },
+      {
+        "q": "Сколько стоит отдать 300 ГБ исходящего трафика из S3 за месяц (только трафик)?",
+        "rep": 1,
+        "ok": true,
+        "tool_calls": 2,
+        "enough_tools": true,
+        "latency_s": 3.88,
+        "error": null,
+        "answer": {
+          "answer": "Стоимость 300 ГБ исходящего трафика из S3 составит 200 рублей в месяц. Первые 100 ГБ предоставляются бесплатно, а каждый последующий ГБ стоит 1 ₽. Таким образом, оплачиваются только 200 ГБ.",
+          "value": 200.0,
+          "sources": [
+            "s3"
+          ]
+        }
+      },
+      {
+        "q": "Хранение 30 дней снапшотов объёмом 200 ГБ — сколько в месяц?",
+        "rep": 1,
+        "ok": true,
+        "tool_calls": 2,
+        "enough_tools": true,
+        "latency_s": 3.72,
+        "error": null,
+        "answer": {
+          "answer": "Хранение снапшотов объёмом 200 ГБ в течение 30 дней будет стоить 600 рублей в месяц (из расчёта 3 ₽ за ГБ).",
+          "value": 600.0,
+          "sources": [
+            "backup"
+          ]
+        }
+      },
+      {
+        "q": "Насколько дороже час L4, чем час T4, в рублях?",
+        "rep": 1,
+        "ok": true,
+        "tool_calls": 2,
+        "enough_tools": true,
+        "latency_s": 3.34,
+        "error": null,
+        "answer": {
+          "answer": "Час аренды NVIDIA L4 дороже часа NVIDIA T4 на 23 рубля (61 ₽ против 38 ₽).",
+          "value": 23.0,
+          "sources": [
+            "gpu"
+          ]
+        }
+      },
+      {
+        "q": "Доступность на тарифе Бизнес упала до 99,7%. Какая компенсация в рублях?",
+        "rep": 1,
+        "ok": true,
+        "tool_calls": 2,
+        "enough_tools": true,
+        "latency_s": 5.49,
+        "error": null,
+        "answer": {
+          "answer": "Для тарифа «Бизнес» (стоимость 5900 ₽/мес) гарантированная доступность составляет 99,95%. При фактической доступности 99,7% отклонение составляет 0,25%. Согласно правилам SLA, компенсация составляет 10% от месячной стоимости за каждые начатые 0,1% отклонения. В данном случае это 3 интервала по 0,1%, что дает 30% компенсации.\n\nСумма компенсации: 5900 ₽ × 30% = 1770 ₽.",
+          "value": 1770.0,
+          "sources": [
+            "sla",
+            "tariffs"
+          ]
+        }
+      },
+      {
+        "q": "Можно ли арендовать GPU H100?",
+        "rep": 1,
+        "ok": true,
+        "tool_calls": 1,
+        "enough_tools": true,
+        "latency_s": 3.08,
+        "error": null,
+        "answer": {
+          "answer": "К сожалению, в данный момент аренда GPU NVIDIA H100 недоступна. В нашем облаке вы можете арендовать следующие модели GPU: NVIDIA T4, NVIDIA L4 и NVIDIA A100 80GB.",
+          "value": null,
+          "sources": [
+            "gpu"
+          ]
+        }
+      },
+      {
+        "q": "Сколько стоит тариф Старт и Про вместе в месяц?",
+        "rep": 1,
+        "ok": true,
+        "tool_calls": 2,
+        "enough_tools": true,
+        "latency_s": 3.46,
+        "error": null,
+        "answer": {
+          "answer": "Тариф «Старт» стоит 990 ₽/мес, а тариф «Про» — 2490 ₽/мес. Вместе они стоят 3480 ₽ в месяц.",
+          "value": 3480.0,
+          "sources": [
+            "tariffs"
+          ]
+        }
+      },
+      {
+        "q": "Есть ли у Облачко регион в Казани?",
+        "rep": 1,
+        "ok": true,
+        "tool_calls": 1,
+        "enough_tools": true,
+        "latency_s": 2.51,
+        "error": null,
+        "answer": {
+          "answer": "Нет, у провайдера «Облачко» нет региона в Казани. Доступные регионы: Москва (msk-1, msk-2), Санкт-Петербург (spb-1) и Новосибирск (nsk-1).",
+          "value": null,
+          "sources": [
+            "regions"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "framework": "openai-agents-sdk",
+    "model": "google/gemini-3-flash-preview",
+    "n": 32,
+    "accuracy": 1.0,
+    "errors": 0,
+    "enough_tool_calls": 1.0,
+    "avg_tool_calls": 1.62,
+    "latency_p50_s": 3.96,
+    "rows": [
+      {
+        "q": "Сколько стоит тариф Про в месяц?",
+        "rep": 0,
+        "ok": true,
+        "tool_calls": 1,
+        "enough_tools": true,
+        "latency_s": 3.36,
+        "error": null,
+        "answer": {
+          "answer": "Тариф Про стоит 2490 ₽ в месяц.",
+          "value": 2490.0,
+          "sources": [
+            "tariffs"
+          ]
+        }
+      },
+      {
+        "q": "Сколько vCPU на тарифе Бизнес?",
+        "rep": 0,
+        "ok": true,
+        "tool_calls": 1,
+        "enough_tools": true,
+        "latency_s": 2.84,
+        "error": null,
+        "answer": {
+          "answer": "На тарифе «Бизнес» предоставляется 8 vCPU.",
+          "value": 8.0,
+          "sources": [
+            "tariffs"
+          ]
+        }
+      },
+      {
+        "q": "Какая доступность по SLA у тарифа Старт?",
+        "rep": 0,
+        "ok": true,
+        "tool_calls": 1,
+        "enough_tools": true,
+        "latency_s": 2.33,
+        "error": null,
+        "answer": {
+          "answer": "Доступность по SLA для тарифа «Старт» составляет 99,5%.",
+          "value": 99.5,
+          "sources": [
+            "sla"
+          ]
+        }
+      },
+      {
+        "q": "В каком регионе доступны A100?",
+        "rep": 0,
+        "ok": true,
+        "tool_calls": 1,
+        "enough_tools": true,
+        "latency_s": 2.63,
+        "error": null,
+        "answer": {
+          "answer": "GPU A100 доступны только в регионе msk-2 (Москва).",
+          "value": null,
+          "sources": [
+            "regions"
+          ]
+        }
+      },
+      {
+        "q": "За сколько отвечает поддержка на тарифе Про?",
+        "rep": 0,
+        "ok": true,
+        "tool_calls": 1,
+        "enough_tools": true,
+        "latency_s": 2.82,
+        "error": null,
+        "answer": {
+          "answer": "На тарифе Про поддержка отвечает в течение 4 часов через тикеты и чат.",
+          "value": 4.0,
+          "sources": [
+            "support"
+          ]
+        }
+      },
+      {
+        "q": "Сколько стоит год тарифа Про при оплате сразу за 12 месяцев?",
+        "rep": 0,
+        "ok": true,
+        "tool_calls": 2,
+        "enough_tools": true,
+        "latency_s": 4.05,
+        "error": null,
+        "answer": {
+          "answer": "Стоимость тарифа «Про» при оплате за 12 месяцев с учетом скидки 15% составляет 25 398 ₽.",
+          "value": 25398.0,
+          "sources": [
+            "tariffs"
+          ]
+        }
+      },
+      {
+        "q": "Сколько стоит полгода тарифа Бизнес при оплате за 6 месяцев?",
+        "rep": 0,
+        "ok": true,
+        "tool_calls": 2,
+        "enough_tools": true,
+        "latency_s": 3.86,
+        "error": null,
+        "answer": {
+          "answer": "Полгода тарифа «Бизнес» при оплате за 6 месяцев с учетом скидки 7% стоят 32 922 ₽.",
+          "value": 32922.0,
+          "sources": [
+            "tariffs"
+          ]
+        }
+      },
+      {
+        "q": "Сколько будет стоить 10 часов аренды A100?",
+        "rep": 0,
+        "ok": true,
+        "tool_calls": 2,
+        "enough_tools": true,
+        "latency_s": 3.41,
+        "error": null,
+        "answer": {
+          "answer": "Аренда NVIDIA A100 80GB на 10 часов будет стоить 2890 рублей.",
+          "value": 2890.0,
+          "sources": [
+            "gpu"
+          ]
+        }
+      },
+      {
+        "q": "Сколько стоит хранить 500 ГБ в S3 месяц?",
+        "rep": 0,
+        "ok": true,
+        "tool_calls": 2,
+        "enough_tools": true,
+        "latency_s": 4.03,
+        "error": null,
+        "answer": {
+          "answer": "Стоимость хранения 500 ГБ в S3 составит 950 рублей в месяц (из расчета 1,9 ₽ за ГБ).",
+          "value": 950.0,
+          "sources": [
+            "s3"
+          ]
+        }
+      },
+      {
+        "q": "Сколько стоит отдать 300 ГБ исходящего трафика из S3 за месяц (только трафик)?",
+        "rep": 0,
+        "ok": true,
+        "tool_calls": 2,
+        "enough_tools": true,
+        "latency_s": 4.16,
+        "error": null,
+        "answer": {
+          "answer": "Стоимость 300 ГБ исходящего трафика из S3 составит 200 рублей (первые 100 ГБ бесплатно, далее по 1 ₽ за ГБ).",
+          "value": 200.0,
+          "sources": [
+            "s3"
+          ]
+        }
+      },
+      {
+        "q": "Хранение 30 дней снапшотов объёмом 200 ГБ — сколько в месяц?",
+        "rep": 0,
+        "ok": true,
+        "tool_calls": 2,
+        "enough_tools": true,
+        "latency_s": 4.19,
+        "error": null,
+        "answer": {
+          "answer": "Хранение 200 ГБ снапшотов в течение 30 дней будет стоить 600 ₽ в месяц.",
+          "value": 600.0,
+          "sources": [
+            "backup"
+          ]
+        }
+      },
+      {
+        "q": "Насколько дороже час L4, чем час T4, в рублях?",
+        "rep": 0,
+        "ok": true,
+        "tool_calls": 2,
+        "enough_tools": true,
+        "latency_s": 4.08,
+        "error": null,
+        "answer": {
+          "answer": "Час L4 дороже часа T4 на 23 рубля.",
+          "value": 23.0,
+          "sources": [
+            "gpu"
+          ]
+        }
+      },
+      {
+        "q": "Доступность на тарифе Бизнес упала до 99,7%. Какая компенсация в рублях?",
+        "rep": 0,
+        "ok": true,
+        "tool_calls": 2,
+        "enough_tools": true,
+        "latency_s": 6.76,
+        "error": null,
+        "answer": {
+          "answer": "Для тарифа «Бизнес» (стоимость 5900 ₽/мес) гарантированная доступность составляет 99,95%. При падении до 99,7% отклонение составляет 0,25%. Согласно правилам SLA, компенсация составляет 10% от месячной стоимости за каждые начатые 0,1% отклонения. В данном случае это 3 интервала по 0,1%, что дает 30% компенсации. Сумма компенсации составит 1770 рублей.",
+          "value": 1770.0,
+          "sources": [
+            "sla",
+            "tariffs"
+          ]
+        }
+      },
+      {
+        "q": "Можно ли арендовать GPU H100?",
+        "rep": 0,
+        "ok": true,
+        "tool_calls": 2,
+        "enough_tools": true,
+        "latency_s": 4.44,
+        "error": null,
+        "answer": {
+          "answer": "К сожалению, в базе знаний нет информации о возможности аренды GPU H100. На данный момент доступны NVIDIA T4, NVIDIA L4 и NVIDIA A100 80GB.",
+          "value": null,
+          "sources": [
+            "gpu"
+          ]
+        }
+      },
+      {
+        "q": "Сколько стоит тариф Старт и Про вместе в месяц?",
+        "rep": 0,
+        "ok": true,
+        "tool_calls": 2,
+        "enough_tools": true,
+        "latency_s": 4.77,
+        "error": null,
+        "answer": {
+          "answer": "Стоимость тарифов Старт (990 ₽/мес) и Про (2490 ₽/мес) вместе составляет 3480 рублей в месяц.",
+          "value": 3480.0,
+          "sources": [
+            "tariffs"
+          ]
+        }
+      },
+      {
+        "q": "Есть ли у Облачко регион в Казани?",
+        "rep": 0,
+        "ok": true,
+        "tool_calls": 1,
+        "enough_tools": true,
+        "latency_s": 2.88,
+        "error": null,
+        "answer": {
+          "answer": "Нет, у «Облачко» нет региона в Казани. Доступные регионы: Москва (msk-1, msk-2), Санкт-Петербург (spb-1) и Новосибирск (nsk-1).",
+          "value": null,
+          "sources": [
+            "regions"
+          ]
+        }
+      },
+      {
+        "q": "Сколько стоит тариф Про в месяц?",
+        "rep": 1,
+        "ok": true,
+        "tool_calls": 1,
+        "enough_tools": true,
+        "latency_s": 3.84,
+        "error": null,
+        "answer": {
+          "answer": "Стоимость тарифа Про составляет 2490 ₽ в месяц.",
+          "value": 2490.0,
+          "sources": [
+            "tariffs"
+          ]
+        }
+      },
+      {
+        "q": "Сколько vCPU на тарифе Бизнес?",
+        "rep": 1,
+        "ok": true,
+        "tool_calls": 1,
+        "enough_tools": true,
+        "latency_s": 2.95,
+        "error": null,
+        "answer": {
+          "answer": "На тарифе «Бизнес» предоставляется 8 vCPU.",
+          "value": 8.0,
+          "sources": [
+            "tariffs"
+          ]
+        }
+      },
+      {
+        "q": "Какая доступность по SLA у тарифа Старт?",
+        "rep": 1,
+        "ok": true,
+        "tool_calls": 1,
+        "enough_tools": true,
+        "latency_s": 2.67,
+        "error": null,
+        "answer": {
+          "answer": "Доступность по SLA для тарифа «Старт» составляет 99,5%.",
+          "value": 99.5,
+          "sources": [
+            "sla"
+          ]
+        }
+      },
+      {
+        "q": "В каком регионе доступны A100?",
+        "rep": 1,
+        "ok": true,
+        "tool_calls": 1,
+        "enough_tools": true,
+        "latency_s": 2.9,
+        "error": null,
+        "answer": {
+          "answer": "GPU A100 доступны только в регионе msk-2 (Москва).",
+          "value": null,
+          "sources": [
+            "regions"
+          ]
+        }
+      },
+      {
+        "q": "За сколько отвечает поддержка на тарифе Про?",
+        "rep": 1,
+        "ok": true,
+        "tool_calls": 1,
+        "enough_tools": true,
+        "latency_s": 2.4,
+        "error": null,
+        "answer": {
+          "answer": "На тарифе Про поддержка отвечает в течение 4 часов через тикеты и чат.",
+          "value": 4.0,
+          "sources": [
+            "support"
+          ]
+        }
+      },
+      {
+        "q": "Сколько стоит год тарифа Про при оплате сразу за 12 месяцев?",
+        "rep": 1,
+        "ok": true,
+        "tool_calls": 2,
+        "enough_tools": true,
+        "latency_s": 4.62,
+        "error": null,
+        "answer": {
+          "answer": "Стоимость тарифа «Про» при оплате за 12 месяцев с учетом скидки 15% составляет 25 398 ₽.",
+          "value": 25398.0,
+          "sources": [
+            "tariffs"
+          ]
+        }
+      },
+      {
+        "q": "Сколько стоит полгода тарифа Бизнес при оплате за 6 месяцев?",
+        "rep": 1,
+        "ok": true,
+        "tool_calls": 2,
+        "enough_tools": true,
+        "latency_s": 5.17,
+        "error": null,
+        "answer": {
+          "answer": "Полгода тарифа «Бизнес» при оплате за 6 месяцев с учетом скидки 7% стоят 32 922 ₽.",
+          "value": 32922.0,
+          "sources": [
+            "tariffs"
+          ]
+        }
+      },
+      {
+        "q": "Сколько будет стоить 10 часов аренды A100?",
+        "rep": 1,
+        "ok": true,
+        "tool_calls": 2,
+        "enough_tools": true,
+        "latency_s": 6.82,
+        "error": null,
+        "answer": {
+          "answer": "Аренда NVIDIA A100 80GB на 10 часов будет стоить 2890 рублей.",
+          "value": 2890.0,
+          "sources": [
+            "gpu"
+          ]
+        }
+      },
+      {
+        "q": "Сколько стоит хранить 500 ГБ в S3 месяц?",
+        "rep": 1,
+        "ok": true,
+        "tool_calls": 2,
+        "enough_tools": true,
+        "latency_s": 3.88,
+        "error": null,
+        "answer": {
+          "answer": "Стоимость хранения 500 ГБ в S3 составит 950 рублей в месяц (из расчета 1,9 ₽ за ГБ).",
+          "value": 950.0,
+          "sources": [
+            "s3"
+          ]
+        }
+      },
+      {
+        "q": "Сколько стоит отдать 300 ГБ исходящего трафика из S3 за месяц (только трафик)?",
+        "rep": 1,
+        "ok": true,
+        "tool_calls": 2,
+        "enough_tools": true,
+        "latency_s": 4.38,
+        "error": null,
+        "answer": {
+          "answer": "Стоимость 300 ГБ исходящего трафика из S3 составит 200 рублей, так как первые 100 ГБ в месяц предоставляются бесплатно, а каждый последующий ГБ стоит 1 ₽.",
+          "value": 200.0,
+          "sources": [
+            "s3"
+          ]
+        }
+      },
+      {
+        "q": "Хранение 30 дней снапшотов объёмом 200 ГБ — сколько в месяц?",
+        "rep": 1,
+        "ok": true,
+        "tool_calls": 2,
+        "enough_tools": true,
+        "latency_s": 4.7,
+        "error": null,
+        "answer": {
+          "answer": "Хранение 200 ГБ снапшотов в течение 30 дней будет стоить 600 ₽ в месяц.",
+          "value": 600.0,
+          "sources": [
+            "backup"
+          ]
+        }
+      },
+      {
+        "q": "Насколько дороже час L4, чем час T4, в рублях?",
+        "rep": 1,
+        "ok": true,
+        "tool_calls": 2,
+        "enough_tools": true,
+        "latency_s": 3.5,
+        "error": null,
+        "answer": {
+          "answer": "Час L4 дороже часа T4 на 23 рубля.",
+          "value": 23.0,
+          "sources": [
+            "gpu"
+          ]
+        }
+      },
+      {
+        "q": "Доступность на тарифе Бизнес упала до 99,7%. Какая компенсация в рублях?",
+        "rep": 1,
+        "ok": true,
+        "tool_calls": 2,
+        "enough_tools": true,
+        "latency_s": 11.45,
+        "error": null,
+        "answer": {
+          "answer": "Для тарифа «Бизнес» (стоимость 5900 ₽/мес) гарантированная доступность составляет 99,95%. При падении до 99,7% отклонение составляет 0,25%. Согласно правилам SLA, компенсация составляет 10% от месячной стоимости за каждые начатые 0,1% отклонения. В данном случае это 3 интервала по 0,1%, что дает 30% компенсации. Сумма компенсации составит 1770 рублей.",
+          "value": 1770.0,
+          "sources": [
+            "sla",
+            "tariffs"
+          ]
+        }
+      },
+      {
+        "q": "Можно ли арендовать GPU H100?",
+        "rep": 1,
+        "ok": true,
+        "tool_calls": 2,
+        "enough_tools": true,
+        "latency_s": 5.33,
+        "error": null,
+        "answer": {
+          "answer": "К сожалению, в базе знаний нет информации о возможности аренды GPU H100. На данный момент доступны NVIDIA T4, NVIDIA L4 и NVIDIA A100 80GB.",
+          "value": null,
+          "sources": [
+            "gpu"
+          ]
+        }
+      },
+      {
+        "q": "Сколько стоит тариф Старт и Про вместе в месяц?",
+        "rep": 1,
+        "ok": true,
+        "tool_calls": 2,
+        "enough_tools": true,
+        "latency_s": 3.67,
+        "error": null,
+        "answer": {
+          "answer": "Стоимость тарифов Старт (990 ₽/мес) и Про (2490 ₽/мес) вместе составляет 3480 рублей в месяц.",
+          "value": 3480.0,
+          "sources": [
+            "tariffs"
+          ]
+        }
+      },
+      {
+        "q": "Есть ли у Облачко регион в Казани?",
+        "rep": 1,
+        "ok": true,
+        "tool_calls": 1,
+        "enough_tools": true,
+        "latency_s": 4.25,
+        "error": null,
+        "answer": {
+          "answer": "Нет, у «Облачко» нет региона в Казани. Доступные регионы: Москва (msk-1, msk-2), Санкт-Петербург (spb-1) и Новосибирск (nsk-1).",
+          "value": null,
+          "sources": [
+            "regions"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "framework": "langgraph",
+    "model": "openai/gpt-5.4-nano-2026-03-17",
+    "n": 32,
+    "accuracy": 0.938,
+    "errors": 0,
+    "enough_tool_calls": 1.0,
+    "avg_tool_calls": 1.59,
+    "latency_p50_s": 3.63,
+    "rows": [
+      {
+        "q": "Сколько стоит тариф Про в месяц?",
+        "rep": 0,
+        "ok": true,
+        "tool_calls": 1,
+        "enough_tools": true,
+        "latency_s": 4.28,
+        "error": null,
+        "answer": {
+          "answer": "Тариф «Про» стоит 2490 ₽ в месяц.",
+          "value": 2490.0,
+          "sources": [
+            "tariffs"
+          ]
+        }
+      },
+      {
+        "q": "Сколько vCPU на тарифе Бизнес?",
+        "rep": 0,
+        "ok": true,
+        "tool_calls": 1,
+        "enough_tools": true,
+        "latency_s": 2.54,
+        "error": null,
+        "answer": {
+          "answer": "На тарифе «Бизнес» — 8 vCPU.",
+          "value": 8.0,
+          "sources": [
+            "tariffs"
+          ]
+        }
+      },
+      {
+        "q": "Какая доступность по SLA у тарифа Старт?",
+        "rep": 0,
+        "ok": true,
+        "tool_calls": 1,
+        "enough_tools": true,
+        "latency_s": 2.49,
+        "error": null,
+        "answer": {
+          "answer": "У тарифа «Старт» доступность по SLA — 99,5%.",
+          "value": 99.5,
+          "sources": [
+            "sla"
+          ]
+        }
+      },
+      {
+        "q": "В каком регионе доступны A100?",
+        "rep": 0,
+        "ok": true,
+        "tool_calls": 1,
+        "enough_tools": true,
+        "latency_s": 2.53,
+        "error": null,
+        "answer": {
+          "answer": "GPU NVIDIA A100 доступны только в регионе **Москва (msk-2)**.",
+          "value": null,
+          "sources": [
+            "regions"
+          ]
+        }
+      },
+      {
+        "q": "За сколько отвечает поддержка на тарифе Про?",
+        "rep": 0,
+        "ok": true,
+        "tool_calls": 1,
+        "enough_tools": true,
+        "latency_s": 2.63,
+        "error": null,
+        "answer": {
+          "answer": "На тарифе «Про» поддержка отвечает в течение **до 4 часов** (тикеты и чат).",
+          "value": 4.0,
+          "sources": [
+            "support"
+          ]
+        }
+      },
+      {
+        "q": "Сколько стоит год тарифа Про при оплате сразу за 12 месяцев?",
+        "rep": 0,
+        "ok": true,
+        "tool_calls": 2,
+        "enough_tools": true,
+        "latency_s": 3.88,
+        "error": null,
+        "answer": {
+          "answer": "При оплате тарифа «Про» сразу за 12 месяцев: 2490 ₽/мес × 12 = 29 880 ₽, со скидкой 15%: 29 880 ₽ × 0,85 = **25 398 ₽ за год**.",
+          "value": 25398.0,
+          "sources": [
+            "tariffs"
+          ]
+        }
+      },
+      {
+        "q": "Сколько стоит полгода тарифа Бизнес при оплате за 6 месяцев?",
+        "rep": 0,
+        "ok": true,
+        "tool_calls": 2,
+        "enough_tools": true,
+        "latency_s": 3.9,
+        "error": null,
+        "answer": {
+          "answer": "При тарифе «Бизнес» (5900 ₽/мес) и оплате за 6 месяцев скидка 7%. Итого: 5900 × 6 × (1 − 0,07) = 32 922 ₽.",
+          "value": 32922.0,
+          "sources": [
+            "tariffs"
+          ]
+        }
+      },
+      {
+        "q": "Сколько будет стоить 10 часов аренды A100?",
+        "rep": 0,
+        "ok": true,
+        "tool_calls": 2,
+        "enough_tools": true,
+        "latency_s": 3.59,
+        "error": null,
+        "answer": {
+          "answer": "Аренда NVIDIA A100 80GB в «Облачко» стоит 289 ₽/час. За 10 часов: 289 × 10 = 2 890 ₽.",
+          "value": 2890.0,
+          "sources": [
+            "gpu"
+          ]
+        }
+      },
+      {
+        "q": "Сколько стоит хранить 500 ГБ в S3 месяц?",
+        "rep": 0,
+        "ok": false,
+        "tool_calls": 2,
+        "enough_tools": true,
+        "latency_s": 4.99,
+        "error": null,
+        "answer": {
+          "answer": "В базе знаний «Облачко» нет тарифов именно для **S3** (стоимость хранения 1 ГБ/мес для S3 не указана), поэтому точно посчитать **500 ГБ в S3 за месяц** не могу.\n\nИз доступного:\n- **Резервные копии (снапшоты)**: хранение **30 дней — 3 ₽ за ГБ в месяц**.\n  Тогда для 500 ГБ: **500 × 3 = 1500 ₽/мес**.\n\nУточните, пожалуйста: вам нужно именно **S3 (объектное хранилище)** или **хранение снапшотов/бэкапов**?",
+          "value": 1500.0,
+          "sources": [
+            "backup"
+          ]
+        }
+      },
+      {
+        "q": "Сколько стоит отдать 300 ГБ исходящего трафика из S3 за месяц (только трафик)?",
+        "rep": 0,
+        "ok": true,
+        "tool_calls": 2,
+        "enough_tools": true,
+        "latency_s": 4.54,
+        "error": null,
+        "answer": {
+          "answer": "По тарифной базе: исходящий трафик из S3 — **1 ₽ за 1 ГБ сверх 100 ГБ/мес**.\n\nДля **300 ГБ/мес**:\n- сверх 100 ГБ: **300 − 100 = 200 ГБ**\n- стоимость: **200 × 1 ₽ = 200 ₽**\n\n**Итого только за исходящий трафик: 200 ₽ в месяц.**",
+          "value": 200.0,
+          "sources": [
+            "s3"
+          ]
+        }
+      },
+      {
+        "q": "Хранение 30 дней снапшотов объёмом 200 ГБ — сколько в месяц?",
+        "rep": 0,
+        "ok": true,
+        "tool_calls": 2,
+        "enough_tools": true,
+        "latency_s": 3.99,
+        "error": null,
+        "answer": {
+          "answer": "Хранение снапшотов на 30 дней стоит 3 ₽ за ГБ в месяц. Для 200 ГБ: 200 × 3 ₽ = 600 ₽ в месяц.",
+          "value": 600.0,
+          "sources": [
+            "backup"
+          ]
+        }
+      },
+      {
+        "q": "Насколько дороже час L4, чем час T4, в рублях?",
+        "rep": 0,
+        "ok": true,
+        "tool_calls": 2,
+        "enough_tools": true,
+        "latency_s": 3.93,
+        "error": null,
+        "answer": {
+          "answer": "Час L4 стоит 61 ₽, а час T4 — 38 ₽. Разница: 61 − 38 = 23 ₽.",
+          "value": 23.0,
+          "sources": [
+            "gpu] GPU-серверы «Облачко»: NVIDIA T4 — 38 ₽/час, NVIDIA L4 — 61 ₽/час, NVIDIA A100 80GB — 289 ₽/час."
+          ]
+        }
+      },
+      {
+        "q": "Доступность на тарифе Бизнес упала до 99,7%. Какая компенсация в рублях?",
+        "rep": 0,
+        "ok": true,
+        "tool_calls": 3,
+        "enough_tools": true,
+        "latency_s": 5.45,
+        "error": null,
+        "answer": {
+          "answer": "На тарифе «Бизнес» SLA = 99,95%. При доступности 99,7% падение составляет 0,25 п.п. Компенсация считается как 10% месячной стоимости за каждые начатые 0,1% ниже SLA: 0,25 п.п. → 3 интервала → 30% месячной стоимости. Месячная стоимость «Бизнес» — 5900 ₽, компенсация = 5900 × 0,30 = **1770 ₽**.",
+          "value": 1770.0,
+          "sources": [
+            "sla",
+            "tariffs"
+          ]
+        }
+      },
+      {
+        "q": "Можно ли арендовать GPU H100?",
+        "rep": 0,
+        "ok": true,
+        "tool_calls": 1,
+        "enough_tools": true,
+        "latency_s": 3.63,
+        "error": null,
+        "answer": {
+          "answer": "В базе знаний «Облачко» нет информации об аренде **NVIDIA H100**. \n\nДоступны другие GPU-серверы: **NVIDIA T4**, **NVIDIA L4**, **NVIDIA A100 80GB** (A100 доступен только в регионе **msk-2**).",
+          "value": null,
+          "sources": [
+            "gpu",
+            "regions"
+          ]
+        }
+      },
+      {
+        "q": "Сколько стоит тариф Старт и Про вместе в месяц?",
+        "rep": 0,
+        "ok": true,
+        "tool_calls": 2,
+        "enough_tools": true,
+        "latency_s": 3.58,
+        "error": null,
+        "answer": {
+          "answer": "Тарифы «Старт» (990 ₽/мес) и «Про» (2490 ₽/мес) вместе стоят 3480 ₽ в месяц.",
+          "value": 3480.0,
+          "sources": [
+            "tariffs"
+          ]
+        }
+      },
+      {
+        "q": "Есть ли у Облачко регион в Казани?",
+        "rep": 0,
+        "ok": true,
+        "tool_calls": 1,
+        "enough_tools": true,
+        "latency_s": 3.0,
+        "error": null,
+        "answer": {
+          "answer": "В базе знаний «Облачко» указаны регионы: **Москва (msk-1, msk-2), Санкт-Петербург (spb-1), Новосибирск (nsk-1)**. \n\n**Отдельного региона/зоны в Казани нет.**",
+          "value": null,
+          "sources": [
+            "regions"
+          ]
+        }
+      },
+      {
+        "q": "Сколько стоит тариф Про в месяц?",
+        "rep": 1,
+        "ok": true,
+        "tool_calls": 1,
+        "enough_tools": true,
+        "latency_s": 2.55,
+        "error": null,
+        "answer": {
+          "answer": "Тариф «Про» стоит 2490 ₽ в месяц.",
+          "value": 2490.0,
+          "sources": [
+            "tariffs"
+          ]
+        }
+      },
+      {
+        "q": "Сколько vCPU на тарифе Бизнес?",
+        "rep": 1,
+        "ok": true,
+        "tool_calls": 1,
+        "enough_tools": true,
+        "latency_s": 3.22,
+        "error": null,
+        "answer": {
+          "answer": "На тарифе «Бизнес» — 8 vCPU.",
+          "value": 8.0,
+          "sources": [
+            "tariffs"
+          ]
+        }
+      },
+      {
+        "q": "Какая доступность по SLA у тарифа Старт?",
+        "rep": 1,
+        "ok": true,
+        "tool_calls": 1,
+        "enough_tools": true,
+        "latency_s": 2.62,
+        "error": null,
+        "answer": {
+          "answer": "У тарифа «Старт» доступность по SLA — 99,5%.",
+          "value": 99.5,
+          "sources": [
+            "sla"
+          ]
+        }
+      },
+      {
+        "q": "В каком регионе доступны A100?",
+        "rep": 1,
+        "ok": true,
+        "tool_calls": 1,
+        "enough_tools": true,
+        "latency_s": 2.5,
+        "error": null,
+        "answer": {
+          "answer": "GPU NVIDIA A100 доступны только в регионе **Москва (msk-2)**.",
+          "value": null,
+          "sources": [
+            "regions"
+          ]
+        }
+      },
+      {
+        "q": "За сколько отвечает поддержка на тарифе Про?",
+        "rep": 1,
+        "ok": true,
+        "tool_calls": 1,
+        "enough_tools": true,
+        "latency_s": 2.55,
+        "error": null,
+        "answer": {
+          "answer": "На тарифе «Про» поддержка отвечает **в течение до 4 часов** (тикеты и чат).",
+          "value": 4.0,
+          "sources": [
+            "support"
+          ]
+        }
+      },
+      {
+        "q": "Сколько стоит год тарифа Про при оплате сразу за 12 месяцев?",
+        "rep": 1,
+        "ok": true,
+        "tool_calls": 2,
+        "enough_tools": true,
+        "latency_s": 3.47,
+        "error": null,
+        "answer": {
+          "answer": "При оплате тарифа «Про» сразу за 12 месяцев стоимость составляет **25 398 ₽ в год**.",
+          "value": 25398.0,
+          "sources": [
+            "tariffs"
+          ]
+        }
+      },
+      {
+        "q": "Сколько стоит полгода тарифа Бизнес при оплате за 6 месяцев?",
+        "rep": 1,
+        "ok": true,
+        "tool_calls": 2,
+        "enough_tools": true,
+        "latency_s": 3.72,
+        "error": null,
+        "answer": {
+          "answer": "При тарифе «Бизнес» (5900 ₽/мес) и оплате за 6 месяцев действует скидка 7%.\n\nИтого: 5900 ₽ × 6 × 0,93 = **32 922 ₽**.",
+          "value": 32922.0,
+          "sources": [
+            "tariffs"
+          ]
+        }
+      },
+      {
+        "q": "Сколько будет стоить 10 часов аренды A100?",
+        "rep": 1,
+        "ok": true,
+        "tool_calls": 2,
+        "enough_tools": true,
+        "latency_s": 3.77,
+        "error": null,
+        "answer": {
+          "answer": "Аренда NVIDIA A100 80GB стоит 289 ₽/час. За 10 часов: 289 × 10 = 2 890 ₽.",
+          "value": 2890.0,
+          "sources": [
+            "gpu-серверы «Облачко»: NVIDIA A100 80GB — 289 ₽/час"
+          ]
+        }
+      },
+      {
+        "q": "Сколько стоит хранить 500 ГБ в S3 месяц?",
+        "rep": 1,
+        "ok": false,
+        "tool_calls": 2,
+        "enough_tools": true,
+        "latency_s": 5.55,
+        "error": null,
+        "answer": {
+          "answer": "В базе знаний «Облачко» нет тарифов именно для **S3 (хранилище S3) по цене за ГБ/мес**, поэтому точно посчитать стоимость хранения **500 ГБ в S3 за месяц** не могу.\n\nЕсли вы имели в виду **резервные снапшоты** (а не S3), то указано:\n- хранение **30 дней**: **3 ₽ за ГБ в месяц**\n- для **500 ГБ**: 500 × 3 = **1500 ₽/мес**\n\nУточните, пожалуйста: речь именно про **S3 storage** или про **хранение снапшотов/бэкапов**?",
+          "value": 1500.0,
+          "sources": [
+            "backup"
+          ]
+        }
+      },
+      {
+        "q": "Сколько стоит отдать 300 ГБ исходящего трафика из S3 за месяц (только трафик)?",
+        "rep": 1,
+        "ok": true,
+        "tool_calls": 2,
+        "enough_tools": true,
+        "latency_s": 4.29,
+        "error": null,
+        "answer": {
+          "answer": "По тарифу: исходящий трафик из S3 — **1 ₽ за ГБ сверх 100 ГБ/мес**. \n\nДля **300 ГБ/мес**: сверх лимита **300 − 100 = 200 ГБ** → **200 × 1 ₽ = 200 ₽**.\n\n**Итого: 200 ₽ в месяц (только исходящий трафик).**",
+          "value": 200.0,
+          "sources": [
+            "tariffs"
+          ]
+        }
+      },
+      {
+        "q": "Хранение 30 дней снапшотов объёмом 200 ГБ — сколько в месяц?",
+        "rep": 1,
+        "ok": true,
+        "tool_calls": 2,
+        "enough_tools": true,
+        "latency_s": 3.64,
+        "error": null,
+        "answer": {
+          "answer": "Хранение снапшотов 30 дней стоит 3 ₽ за ГБ в месяц. Для 200 ГБ: 200 × 3 ₽ = 600 ₽ в месяц.",
+          "value": 600.0,
+          "sources": [
+            "backup"
+          ]
+        }
+      },
+      {
+        "q": "Насколько дороже час L4, чем час T4, в рублях?",
+        "rep": 1,
+        "ok": true,
+        "tool_calls": 2,
+        "enough_tools": true,
+        "latency_s": 3.97,
+        "error": null,
+        "answer": {
+          "answer": "Час L4 стоит 61 ₽/час, а час T4 — 38 ₽/час. Разница: 61 − 38 = 23 ₽.",
+          "value": 23.0,
+          "sources": [
+            "gpu] GPU-серверы «Облачко»: NVIDIA T4 — 38 ₽/час, NVIDIA L4 — 61 ₽/час, NVIDIA A100 80GB — 289 ₽/час."
+          ]
+        }
+      },
+      {
+        "q": "Доступность на тарифе Бизнес упала до 99,7%. Какая компенсация в рублях?",
+        "rep": 1,
+        "ok": true,
+        "tool_calls": 2,
+        "enough_tools": true,
+        "latency_s": 5.17,
+        "error": null,
+        "answer": {
+          "answer": "По SLA для тарифа «Бизнес» базовая доступность — 99,95%. Компенсация: 10% месячной стоимости за каждые начатые 0,1% ниже SLA, но не более 50%.\n\nФакт: 99,7% → падение 99,95% − 99,7% = 0,25%.\n0,25% соответствует 3 начатым интервалам по 0,1% → компенсация 3 × 10% = 30%.\n\nМесячная стоимость «Бизнес» — 5900 ₽/мес.\nКомпенсация: 5900 × 30% = **1770 ₽**.",
+          "value": 1770.0,
+          "sources": [
+            "sla",
+            "tariffs"
+          ]
+        }
+      },
+      {
+        "q": "Можно ли арендовать GPU H100?",
+        "rep": 1,
+        "ok": true,
+        "tool_calls": 1,
+        "enough_tools": true,
+        "latency_s": 3.5,
+        "error": null,
+        "answer": {
+          "answer": "В «Облачко» в базе знаний указаны GPU для аренды: **NVIDIA T4**, **NVIDIA L4** и **NVIDIA A100 80GB**. Про **NVIDIA H100** данных нет, поэтому подтвердить аренду H100 я не могу.\n\nЕсли скажете, для чего нужен H100 (обучение/инференс, размер модели, требования по памяти), подберу ближайший доступный вариант (например, A100 80GB).",
+          "value": null,
+          "sources": [
+            "gpu"
+          ]
+        }
+      },
+      {
+        "q": "Сколько стоит тариф Старт и Про вместе в месяц?",
+        "rep": 1,
+        "ok": true,
+        "tool_calls": 2,
+        "enough_tools": true,
+        "latency_s": 3.7,
+        "error": null,
+        "answer": {
+          "answer": "Тарифы «Старт» (990 ₽/мес) и «Про» (2490 ₽/мес) вместе стоят 3480 ₽ в месяц.",
+          "value": 3480.0,
+          "sources": [
+            "tariffs"
+          ]
+        }
+      },
+      {
+        "q": "Есть ли у Облачко регион в Казани?",
+        "rep": 1,
+        "ok": true,
+        "tool_calls": 1,
+        "enough_tools": true,
+        "latency_s": 3.04,
+        "error": null,
+        "answer": {
+          "answer": "В базе знаний «Облачко» указаны регионы: **Москва (msk-1, msk-2)**, **Санкт-Петербург (spb-1)** и **Новосибирск (nsk-1)**. \n\n**Региона в Казани нет** (по имеющимся данным).",
+          "value": null,
+          "sources": [
+            "regions"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "framework": "pydantic-ai",
+    "model": "openai/gpt-5.4-nano-2026-03-17",
+    "n": 32,
+    "accuracy": 0.875,
+    "errors": 0,
+    "enough_tool_calls": 1.0,
+    "avg_tool_calls": 1.97,
+    "latency_p50_s": 2.75,
+    "rows": [
+      {
+        "q": "Сколько стоит тариф Про в месяц?",
+        "rep": 0,
+        "ok": true,
+        "tool_calls": 1,
+        "enough_tools": true,
+        "latency_s": 3.1,
+        "error": null,
+        "answer": {
+          "answer": "Тариф «Про» стоит 2490 ₽ в месяц.",
+          "value": 2490.0,
+          "sources": [
+            "tariffs"
+          ]
+        }
+      },
+      {
+        "q": "Сколько vCPU на тарифе Бизнес?",
+        "rep": 0,
+        "ok": true,
+        "tool_calls": 1,
+        "enough_tools": true,
+        "latency_s": 1.82,
+        "error": null,
+        "answer": {
+          "answer": "На тарифе «Бизнес» — 8 vCPU.",
+          "value": 8.0,
+          "sources": [
+            "tariffs"
+          ]
+        }
+      },
+      {
+        "q": "Какая доступность по SLA у тарифа Старт?",
+        "rep": 0,
+        "ok": true,
+        "tool_calls": 1,
+        "enough_tools": true,
+        "latency_s": 1.81,
+        "error": null,
+        "answer": {
+          "answer": "У тарифа «Старт» SLA по доступности — 99,5%.",
+          "value": null,
+          "sources": [
+            "sla"
+          ]
+        }
+      },
+      {
+        "q": "В каком регионе доступны A100?",
+        "rep": 0,
+        "ok": true,
+        "tool_calls": 1,
+        "enough_tools": true,
+        "latency_s": 1.85,
+        "error": null,
+        "answer": {
+          "answer": "GPU NVIDIA A100 доступны только в регионе Москва (msk-2).",
+          "value": null,
+          "sources": [
+            "regions"
+          ]
+        }
+      },
+      {
+        "q": "За сколько отвечает поддержка на тарифе Про?",
+        "rep": 0,
+        "ok": true,
+        "tool_calls": 1,
+        "enough_tools": true,
+        "latency_s": 1.77,
+        "error": null,
+        "answer": {
+          "answer": "На тарифе «Про» поддержка отвечает в течение до 4 часов (тикеты и чат).",
+          "value": null,
+          "sources": [
+            "support"
+          ]
+        }
+      },
+      {
+        "q": "Сколько стоит год тарифа Про при оплате сразу за 12 месяцев?",
+        "rep": 0,
+        "ok": true,
+        "tool_calls": 2,
+        "enough_tools": true,
+        "latency_s": 3.07,
+        "error": null,
+        "answer": {
+          "answer": "Год тарифа «Про» при оплате сразу за 12 месяцев стоит 25 398 ₽ (2490 ₽/мес со скидкой 15%).",
+          "value": 25398.0,
+          "sources": [
+            "tariffs"
+          ]
+        }
+      },
+      {
+        "q": "Сколько стоит полгода тарифа Бизнес при оплате за 6 месяцев?",
+        "rep": 0,
+        "ok": true,
+        "tool_calls": 2,
+        "enough_tools": true,
+        "latency_s": 2.77,
+        "error": null,
+        "answer": {
+          "answer": "При оплате за 6 месяцев тариф «Бизнес» стоит 32 922 ₽ (вместо 35 400 ₽ без скидки).",
+          "value": 32922.0,
+          "sources": [
+            "tariffs"
+          ]
+        }
+      },
+      {
+        "q": "Сколько будет стоить 10 часов аренды A100?",
+        "rep": 0,
+        "ok": true,
+        "tool_calls": 2,
+        "enough_tools": true,
+        "latency_s": 2.78,
+        "error": null,
+        "answer": {
+          "answer": "10 часов аренды NVIDIA A100 (80GB) будет стоить 2890 ₽.",
+          "value": 2890.0,
+          "sources": [
+            "gpu"
+          ]
+        }
+      },
+      {
+        "q": "Сколько стоит хранить 500 ГБ в S3 месяц?",
+        "rep": 0,
+        "ok": false,
+        "tool_calls": 4,
+        "enough_tools": true,
+        "latency_s": 4.72,
+        "error": null,
+        "answer": {
+          "answer": "В базе знаний «Облачко» есть цена только для хранения снапшотов: 30 дней — 3 ₽ за ГБ в месяц. Если речь именно об этом, то для 500 ГБ: 500 × 3 ₽ = 1500 ₽/мес.",
+          "value": 1500.0,
+          "sources": [
+            "backup"
+          ]
+        }
+      },
+      {
+        "q": "Сколько стоит отдать 300 ГБ исходящего трафика из S3 за месяц (только трафик)?",
+        "rep": 0,
+        "ok": true,
+        "tool_calls": 3,
+        "enough_tools": true,
+        "latency_s": 3.92,
+        "error": null,
+        "answer": {
+          "answer": "Исходящий трафик из S3: первые 100 ГБ/мес — бесплатно, далее 1 ₽ за ГБ. Для 300 ГБ за месяц: (300−100)×1 ₽ = 200 ₽ только за трафик.",
+          "value": 200.0,
+          "sources": [
+            "s3"
+          ]
+        }
+      },
+      {
+        "q": "Хранение 30 дней снапшотов объёмом 200 ГБ — сколько в месяц?",
+        "rep": 0,
+        "ok": true,
+        "tool_calls": 2,
+        "enough_tools": true,
+        "latency_s": 2.82,
+        "error": null,
+        "answer": {
+          "answer": "Хранение снапшотов 30 дней: 3 ₽ за ГБ в месяц. Для 200 ГБ это 600 ₽ в месяц.",
+          "value": 600.0,
+          "sources": [
+            "backup"
+          ]
+        }
+      },
+      {
+        "q": "Насколько дороже час L4, чем час T4, в рублях?",
+        "rep": 0,
+        "ok": true,
+        "tool_calls": 2,
+        "enough_tools": true,
+        "latency_s": 2.59,
+        "error": null,
+        "answer": {
+          "answer": "Час L4 дороже часа T4 на 23 ₽.",
+          "value": 23.0,
+          "sources": [
+            "gpu"
+          ]
+        }
+      },
+      {
+        "q": "Доступность на тарифе Бизнес упала до 99,7%. Какая компенсация в рублях?",
+        "rep": 0,
+        "ok": true,
+        "tool_calls": 5,
+        "enough_tools": true,
+        "latency_s": 4.2,
+        "error": null,
+        "answer": {
+          "answer": "Компенсация: 1770 ₽.",
+          "value": 1770.0,
+          "sources": [
+            "sla",
+            "tariffs"
+          ]
+        }
+      },
+      {
+        "q": "Можно ли арендовать GPU H100?",
+        "rep": 0,
+        "ok": true,
+        "tool_calls": 2,
+        "enough_tools": true,
+        "latency_s": 3.12,
+        "error": null,
+        "answer": {
+          "answer": "В базе «Облачко» нет информации об аренде GPU NVIDIA H100. Доступны GPU-серверы с NVIDIA T4, NVIDIA L4 и NVIDIA A100 80GB (A100 доступен только в регионе msk-2).",
+          "value": null,
+          "sources": [
+            "gpu"
+          ]
+        }
+      },
+      {
+        "q": "Сколько стоит тариф Старт и Про вместе в месяц?",
+        "rep": 0,
+        "ok": true,
+        "tool_calls": 2,
+        "enough_tools": true,
+        "latency_s": 2.74,
+        "error": null,
+        "answer": {
+          "answer": "Тарифы «Старт» и «Про» вместе стоят 3480 ₽ в месяц.",
+          "value": 3480.0,
+          "sources": [
+            "tariffs"
+          ]
+        }
+      },
+      {
+        "q": "Есть ли у Облачко регион в Казани?",
+        "rep": 0,
+        "ok": false,
+        "tool_calls": 1,
+        "enough_tools": true,
+        "latency_s": 2.05,
+        "error": null,
+        "answer": {
+          "answer": "В базе знаний «Облачко» указаны регионы: Москва (msk-1, msk-2), Санкт-Петербург (spb-1) и Новосибирск (nsk-1). Регион в Казани не указан.",
+          "value": null,
+          "sources": [
+            "regions"
+          ]
+        }
+      },
+      {
+        "q": "Сколько стоит тариф Про в месяц?",
+        "rep": 1,
+        "ok": true,
+        "tool_calls": 1,
+        "enough_tools": true,
+        "latency_s": 1.83,
+        "error": null,
+        "answer": {
+          "answer": "Тариф «Про» стоит 2490 ₽ в месяц.",
+          "value": 2490.0,
+          "sources": [
+            "tariffs"
+          ]
+        }
+      },
+      {
+        "q": "Сколько vCPU на тарифе Бизнес?",
+        "rep": 1,
+        "ok": true,
+        "tool_calls": 1,
+        "enough_tools": true,
+        "latency_s": 1.81,
+        "error": null,
+        "answer": {
+          "answer": "На тарифе «Бизнес» — 8 vCPU.",
+          "value": 8.0,
+          "sources": [
+            "tariffs"
+          ]
+        }
+      },
+      {
+        "q": "Какая доступность по SLA у тарифа Старт?",
+        "rep": 1,
+        "ok": true,
+        "tool_calls": 1,
+        "enough_tools": true,
+        "latency_s": 1.74,
+        "error": null,
+        "answer": {
+          "answer": "У тарифа «Старт» SLA по доступности — 99,5%.",
+          "value": null,
+          "sources": [
+            "sla"
+          ]
+        }
+      },
+      {
+        "q": "В каком регионе доступны A100?",
+        "rep": 1,
+        "ok": true,
+        "tool_calls": 1,
+        "enough_tools": true,
+        "latency_s": 1.69,
+        "error": null,
+        "answer": {
+          "answer": "GPU NVIDIA A100 доступны только в регионе Москва (msk-2).",
+          "value": null,
+          "sources": [
+            "regions"
+          ]
+        }
+      },
+      {
+        "q": "За сколько отвечает поддержка на тарифе Про?",
+        "rep": 1,
+        "ok": true,
+        "tool_calls": 1,
+        "enough_tools": true,
+        "latency_s": 1.81,
+        "error": null,
+        "answer": {
+          "answer": "На тарифе «Про» поддержка отвечает в течение до 4 часов (тикеты и чат).",
+          "value": null,
+          "sources": [
+            "support"
+          ]
+        }
+      },
+      {
+        "q": "Сколько стоит год тарифа Про при оплате сразу за 12 месяцев?",
+        "rep": 1,
+        "ok": true,
+        "tool_calls": 2,
+        "enough_tools": true,
+        "latency_s": 2.91,
+        "error": null,
+        "answer": {
+          "answer": "Год тарифа «Про» при оплате сразу за 12 месяцев стоит 25 398 ₽ (скидка 15%).",
+          "value": 25398.0,
+          "sources": [
+            "tariffs"
+          ]
+        }
+      },
+      {
+        "q": "Сколько стоит полгода тарифа Бизнес при оплате за 6 месяцев?",
+        "rep": 1,
+        "ok": true,
+        "tool_calls": 2,
+        "enough_tools": true,
+        "latency_s": 2.89,
+        "error": null,
+        "answer": {
+          "answer": "При оплате тарифа «Бизнес» за 6 месяцев стоимость составит 32 922 ₽ (скидка 7% от 5 900 ₽/мес).",
+          "value": 32922.0,
+          "sources": [
+            "tariffs"
+          ]
+        }
+      },
+      {
+        "q": "Сколько будет стоить 10 часов аренды A100?",
+        "rep": 1,
+        "ok": true,
+        "tool_calls": 2,
+        "enough_tools": true,
+        "latency_s": 2.73,
+        "error": null,
+        "answer": {
+          "answer": "10 часов аренды NVIDIA A100 (80GB) будет стоить 2 890 ₽.",
+          "value": 2890.0,
+          "sources": [
+            "gpu"
+          ]
+        }
+      },
+      {
+        "q": "Сколько стоит хранить 500 ГБ в S3 месяц?",
+        "rep": 1,
+        "ok": false,
+        "tool_calls": 4,
+        "enough_tools": true,
+        "latency_s": 4.65,
+        "error": null,
+        "answer": {
+          "answer": "Хранение 500 ГБ в S3 (как хранение снапшотов 30 дней) стоит 3 ₽ за ГБ в месяц, итого 1500 ₽/мес.",
+          "value": 1500.0,
+          "sources": [
+            "backup"
+          ]
+        }
+      },
+      {
+        "q": "Сколько стоит отдать 300 ГБ исходящего трафика из S3 за месяц (только трафик)?",
+        "rep": 1,
+        "ok": true,
+        "tool_calls": 3,
+        "enough_tools": true,
+        "latency_s": 4.15,
+        "error": null,
+        "answer": {
+          "answer": "Исходящий трафик из S3: первые 100 ГБ/мес — бесплатно, далее 1 ₽ за ГБ. Для 300 ГБ это (300−100)=200 ГБ платно → 200 ₽ за месяц только за трафик.",
+          "value": 200.0,
+          "sources": [
+            "s3"
+          ]
+        }
+      },
+      {
+        "q": "Хранение 30 дней снапшотов объёмом 200 ГБ — сколько в месяц?",
+        "rep": 1,
+        "ok": true,
+        "tool_calls": 2,
+        "enough_tools": true,
+        "latency_s": 2.68,
+        "error": null,
+        "answer": {
+          "answer": "Хранение снапшотов 30 дней для объёма 200 ГБ стоит 600 ₽ в месяц.",
+          "value": 600.0,
+          "sources": [
+            "backup"
+          ]
+        }
+      },
+      {
+        "q": "Насколько дороже час L4, чем час T4, в рублях?",
+        "rep": 1,
+        "ok": true,
+        "tool_calls": 2,
+        "enough_tools": true,
+        "latency_s": 2.58,
+        "error": null,
+        "answer": {
+          "answer": "Час L4 дороже часа T4 на 23 ₽.",
+          "value": 23.0,
+          "sources": [
+            "gpu"
+          ]
+        }
+      },
+      {
+        "q": "Доступность на тарифе Бизнес упала до 99,7%. Какая компенсация в рублях?",
+        "rep": 1,
+        "ok": false,
+        "tool_calls": 3,
+        "enough_tools": true,
+        "latency_s": 3.98,
+        "error": null,
+        "answer": {
+          "answer": "При доступности 99,7% на тарифе «Бизнес» компенсация составит 1180 ₽ за месяц (это 2,5 начатых интервала по 0,1% ниже SLA; округление по правилам SLA даёт 3 интервала, но по формуле выходит 2,5 — в базе указано начисление за каждые начатые 0,1%).",
+          "value": 1180.0,
+          "sources": [
+            "sla",
+            "tariffs"
+          ]
+        }
+      },
+      {
+        "q": "Можно ли арендовать GPU H100?",
+        "rep": 1,
+        "ok": true,
+        "tool_calls": 3,
+        "enough_tools": true,
+        "latency_s": 3.54,
+        "error": null,
+        "answer": {
+          "answer": "В базе «Облачко» нет информации об аренде GPU NVIDIA H100. Доступны GPU-серверы с NVIDIA T4, NVIDIA L4 и NVIDIA A100 80GB.",
+          "value": null,
+          "sources": [
+            "gpu"
+          ]
+        }
+      },
+      {
+        "q": "Сколько стоит тариф Старт и Про вместе в месяц?",
+        "rep": 1,
+        "ok": true,
+        "tool_calls": 2,
+        "enough_tools": true,
+        "latency_s": 3.0,
+        "error": null,
+        "answer": {
+          "answer": "Тарифы «Старт» и «Про» вместе стоят 3480 ₽ в месяц.",
+          "value": 3480.0,
+          "sources": [
+            "tariffs"
+          ]
+        }
+      },
+      {
+        "q": "Есть ли у Облачко регион в Казани?",
+        "rep": 1,
+        "ok": true,
+        "tool_calls": 1,
+        "enough_tools": true,
+        "latency_s": 2.12,
+        "error": null,
+        "answer": {
+          "answer": "В базе знаний «Облачко» указаны регионы: Москва (msk-1, msk-2), Санкт-Петербург (spb-1) и Новосибирск (nsk-1). Региона в Казани нет.",
+          "value": null,
+          "sources": [
+            "regions"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "framework": "openai-agents-sdk",
+    "model": "openai/gpt-5.4-nano-2026-03-17",
+    "n": 32,
+    "accuracy": 0.875,
+    "errors": 0,
+    "enough_tool_calls": 1.0,
+    "avg_tool_calls": 1.59,
+    "latency_p50_s": 2.64,
+    "rows": [
+      {
+        "q": "Сколько стоит тариф Про в месяц?",
+        "rep": 0,
+        "ok": true,
+        "tool_calls": 1,
+        "enough_tools": true,
+        "latency_s": 2.41,
+        "error": null,
+        "answer": {
+          "answer": "Тариф «Про» стоит 2490 ₽ в месяц.",
+          "value": 2490.0,
+          "sources": [
+            "tariffs"
+          ]
+        }
+      },
+      {
+        "q": "Сколько vCPU на тарифе Бизнес?",
+        "rep": 0,
+        "ok": true,
+        "tool_calls": 1,
+        "enough_tools": true,
+        "latency_s": 1.76,
+        "error": null,
+        "answer": {
+          "answer": "На тарифе «Бизнес» — 8 vCPU.",
+          "value": 8.0,
+          "sources": [
+            "tariffs"
+          ]
+        }
+      },
+      {
+        "q": "Какая доступность по SLA у тарифа Старт?",
+        "rep": 0,
+        "ok": true,
+        "tool_calls": 1,
+        "enough_tools": true,
+        "latency_s": 1.76,
+        "error": null,
+        "answer": {
+          "answer": "По SLA тариф «Старт» имеет доступность **99,5%**.",
+          "value": 99.5,
+          "sources": [
+            "sla"
+          ]
+        }
+      },
+      {
+        "q": "В каком регионе доступны A100?",
+        "rep": 0,
+        "ok": true,
+        "tool_calls": 1,
+        "enough_tools": true,
+        "latency_s": 1.76,
+        "error": null,
+        "answer": {
+          "answer": "GPU NVIDIA A100 доступны только в регионе **Москва (msk-2)**.",
+          "value": null,
+          "sources": [
+            "regions"
+          ]
+        }
+      },
+      {
+        "q": "За сколько отвечает поддержка на тарифе Про?",
+        "rep": 0,
+        "ok": true,
+        "tool_calls": 1,
+        "enough_tools": true,
+        "latency_s": 2.08,
+        "error": null,
+        "answer": {
+          "answer": "На тарифе «Про» поддержка отвечает в течение до 4 часов (тикеты и чат).",
+          "value": null,
+          "sources": [
+            "support"
+          ]
+        }
+      },
+      {
+        "q": "Сколько стоит год тарифа Про при оплате сразу за 12 месяцев?",
+        "rep": 0,
+        "ok": true,
+        "tool_calls": 2,
+        "enough_tools": true,
+        "latency_s": 2.83,
+        "error": null,
+        "answer": {
+          "answer": "Год тарифа «Про» при оплате сразу за 12 месяцев: 24 490 ₽/мес × 12 месяцев с скидкой 15% = 25 398 ₽.",
+          "value": 25398.0,
+          "sources": [
+            "tariffs"
+          ]
+        }
+      },
+      {
+        "q": "Сколько стоит полгода тарифа Бизнес при оплате за 6 месяцев?",
+        "rep": 0,
+        "ok": true,
+        "tool_calls": 2,
+        "enough_tools": true,
+        "latency_s": 3.08,
+        "error": null,
+        "answer": {
+          "answer": "При оплате за 6 месяцев для тарифа «Бизнес» действует скидка 7%.\nСтоимость: 5900 ₽/мес × 6 × (1 − 0,07) = **32 922 ₽** за полгода.",
+          "value": 32922.0,
+          "sources": [
+            "tariffs"
+          ]
+        }
+      },
+      {
+        "q": "Сколько будет стоить 10 часов аренды A100?",
+        "rep": 0,
+        "ok": true,
+        "tool_calls": 2,
+        "enough_tools": true,
+        "latency_s": 2.63,
+        "error": null,
+        "answer": {
+          "answer": "10 часов аренды NVIDIA A100 80GB стоят 2 890 ₽ (289 ₽/час).",
+          "value": 2890.0,
+          "sources": [
+            "gpu"
+          ]
+        }
+      },
+      {
+        "q": "Сколько стоит хранить 500 ГБ в S3 месяц?",
+        "rep": 0,
+        "ok": false,
+        "tool_calls": 2,
+        "enough_tools": true,
+        "latency_s": 3.05,
+        "error": null,
+        "answer": {
+          "answer": "В базе знаний «Облачко» нет тарифа именно для S3-хранилища (цены за ГБ/месяц для S3). Есть только информация про резервное копирование (снапшоты) — хранение 30 дней стоит 3 ₽ за ГБ в месяц.\n\nЕсли вы имели в виду хранение снапшотов 30 дней, то для 500 ГБ: 500 × 3 ₽ = **1500 ₽/месяц**.",
+          "value": 1500.0,
+          "sources": [
+            "backup",
+            "tariffs"
+          ]
+        }
+      },
+      {
+        "q": "Сколько стоит отдать 300 ГБ исходящего трафика из S3 за месяц (только трафик)?",
+        "rep": 0,
+        "ok": true,
+        "tool_calls": 2,
+        "enough_tools": true,
+        "latency_s": 3.27,
+        "error": null,
+        "answer": {
+          "answer": "По тарифу S3: исходящий трафик — 1 ₽ за ГБ сверх 100 ГБ/мес. \nДля 300 ГБ за месяц: (300 − 100) × 1 ₽ = 200 ₽. \nИтого только за исходящий трафик: **200 ₽/мес**.",
+          "value": 200.0,
+          "sources": [
+            "[s3] Объектное хранилище S3: 1,9 ₽ за ГБ в месяц, исходящий трафик — 1 ₽ за ГБ сверх 100 ГБ в месяц, входящий бесплатно."
+          ]
+        }
+      },
+      {
+        "q": "Хранение 30 дней снапшотов объёмом 200 ГБ — сколько в месяц?",
+        "rep": 0,
+        "ok": true,
+        "tool_calls": 2,
+        "enough_tools": true,
+        "latency_s": 2.78,
+        "error": null,
+        "answer": {
+          "answer": "Хранение снапшотов 30 дней: 3 ₽ за ГБ в месяц. Для 200 ГБ это 200 × 3 ₽ = **600 ₽ в месяц**.",
+          "value": 600.0,
+          "sources": [
+            "backup"
+          ]
+        }
+      },
+      {
+        "q": "Насколько дороже час L4, чем час T4, в рублях?",
+        "rep": 0,
+        "ok": true,
+        "tool_calls": 2,
+        "enough_tools": true,
+        "latency_s": 3.09,
+        "error": null,
+        "answer": {
+          "answer": "Час L4 дороже часа T4 на 23 ₽ (61 ₽/час vs 38 ₽/час).",
+          "value": 23.0,
+          "sources": [
+            "gpu"
+          ]
+        }
+      },
+      {
+        "q": "Доступность на тарифе Бизнес упала до 99,7%. Какая компенсация в рублях?",
+        "rep": 0,
+        "ok": true,
+        "tool_calls": 2,
+        "enough_tools": true,
+        "latency_s": 3.2,
+        "error": null,
+        "answer": {
+          "answer": "По SLA для тарифа «Бизнес» целевая доступность — 99,95%. Фактическая 99,7% ниже на 0,25 п.п. \nКомпенсация: 10% месячной стоимости за каждые начатые 0,1% ниже SLA → 0,25% = 3 начатых интервала → 30% месячной стоимости.\nМесячная стоимость «Бизнес» — 5900 ₽, компенсация = 5900 ₽ × 30% = **1770 ₽** (за месяц).",
+          "value": 1770.0,
+          "sources": [
+            "sla",
+            "tariffs"
+          ]
+        }
+      },
+      {
+        "q": "Можно ли арендовать GPU H100?",
+        "rep": 0,
+        "ok": false,
+        "tool_calls": 1,
+        "enough_tools": true,
+        "latency_s": 1.85,
+        "error": null,
+        "answer": {
+          "answer": "В базе знаний «Облачко» указаны арендуемые GPU: NVIDIA T4, NVIDIA L4 и NVIDIA A100 80GB. Про GPU H100 в доступных вариантах не сказано, поэтому подтвердить аренду H100 не могу.",
+          "value": null,
+          "sources": [
+            "gpu",
+            "regions"
+          ]
+        }
+      },
+      {
+        "q": "Сколько стоит тариф Старт и Про вместе в месяц?",
+        "rep": 0,
+        "ok": true,
+        "tool_calls": 2,
+        "enough_tools": true,
+        "latency_s": 2.74,
+        "error": null,
+        "answer": {
+          "answer": "Тарифы «Старт» (990 ₽/мес) и «Про» (2490 ₽/мес) вместе стоят 3480 ₽ в месяц.",
+          "value": 3480.0,
+          "sources": [
+            "tariffs"
+          ]
+        }
+      },
+      {
+        "q": "Есть ли у Облачко регион в Казани?",
+        "rep": 0,
+        "ok": true,
+        "tool_calls": 1,
+        "enough_tools": true,
+        "latency_s": 1.82,
+        "error": null,
+        "answer": {
+          "answer": "В базе знаний «Облачко» указаны регионы: Москва, Санкт-Петербург и Новосибирск. Про региона в Казани информации нет.",
+          "value": null,
+          "sources": [
+            "regions"
+          ]
+        }
+      },
+      {
+        "q": "Сколько стоит тариф Про в месяц?",
+        "rep": 1,
+        "ok": true,
+        "tool_calls": 1,
+        "enough_tools": true,
+        "latency_s": 1.72,
+        "error": null,
+        "answer": {
+          "answer": "Тариф «Про» стоит **2490 ₽ в месяц**.",
+          "value": 2490.0,
+          "sources": [
+            "tariffs"
+          ]
+        }
+      },
+      {
+        "q": "Сколько vCPU на тарифе Бизнес?",
+        "rep": 1,
+        "ok": true,
+        "tool_calls": 1,
+        "enough_tools": true,
+        "latency_s": 1.72,
+        "error": null,
+        "answer": {
+          "answer": "На тарифе «Бизнес» — 8 vCPU.",
+          "value": 8.0,
+          "sources": [
+            "tariffs"
+          ]
+        }
+      },
+      {
+        "q": "Какая доступность по SLA у тарифа Старт?",
+        "rep": 1,
+        "ok": true,
+        "tool_calls": 1,
+        "enough_tools": true,
+        "latency_s": 1.7,
+        "error": null,
+        "answer": {
+          "answer": "Для тарифа «Старт» доступность по SLA — **99,5%**.",
+          "value": 99.5,
+          "sources": [
+            "sla"
+          ]
+        }
+      },
+      {
+        "q": "В каком регионе доступны A100?",
+        "rep": 1,
+        "ok": true,
+        "tool_calls": 1,
+        "enough_tools": true,
+        "latency_s": 1.7,
+        "error": null,
+        "answer": {
+          "answer": "GPU NVIDIA A100 доступны только в регионе **Москва (msk-2)**.",
+          "value": null,
+          "sources": [
+            "regions"
+          ]
+        }
+      },
+      {
+        "q": "За сколько отвечает поддержка на тарифе Про?",
+        "rep": 1,
+        "ok": true,
+        "tool_calls": 1,
+        "enough_tools": true,
+        "latency_s": 1.79,
+        "error": null,
+        "answer": {
+          "answer": "На тарифе «Про» поддержка отвечает в течение до 4 часов (тикеты и чат).",
+          "value": null,
+          "sources": [
+            "support"
+          ]
+        }
+      },
+      {
+        "q": "Сколько стоит год тарифа Про при оплате сразу за 12 месяцев?",
+        "rep": 1,
+        "ok": true,
+        "tool_calls": 2,
+        "enough_tools": true,
+        "latency_s": 2.68,
+        "error": null,
+        "answer": {
+          "answer": "Год тарифа «Про» при оплате сразу за 12 месяцев стоит 25 398 ₽ (2490 ₽/мес × 12 со скидкой 15%).",
+          "value": 25398.0,
+          "sources": [
+            "tariffs"
+          ]
+        }
+      },
+      {
+        "q": "Сколько стоит полгода тарифа Бизнес при оплате за 6 месяцев?",
+        "rep": 1,
+        "ok": true,
+        "tool_calls": 2,
+        "enough_tools": true,
+        "latency_s": 2.81,
+        "error": null,
+        "answer": {
+          "answer": "При оплате за 6 месяцев для тарифа «Бизнес» действует скидка 7%.\nСтоимость за полгода: 5900 ₽/мес × 6 × 0,93 = **32 922 ₽**.",
+          "value": 32922.0,
+          "sources": [
+            "tariffs"
+          ]
+        }
+      },
+      {
+        "q": "Сколько будет стоить 10 часов аренды A100?",
+        "rep": 1,
+        "ok": true,
+        "tool_calls": 2,
+        "enough_tools": true,
+        "latency_s": 2.63,
+        "error": null,
+        "answer": {
+          "answer": "10 часов аренды NVIDIA A100 80GB: 289 ₽/час × 10 = 2 890 ₽.",
+          "value": 2890.0,
+          "sources": [
+            "gpu"
+          ]
+        }
+      },
+      {
+        "q": "Сколько стоит хранить 500 ГБ в S3 месяц?",
+        "rep": 1,
+        "ok": false,
+        "tool_calls": 2,
+        "enough_tools": true,
+        "latency_s": 3.41,
+        "error": null,
+        "answer": {
+          "answer": "В базе «Облачко» есть цена хранения для **резервных снапшотов**: хранение **30 дней — 3 ₽ за ГБ в месяц**. \n\nЕсли считать, что вам нужно хранить 500 ГБ в S3 **1 месяц** по этой ставке: 500 × 3 ₽ = **1500 ₽/мес**.\n\nЕсли вы имели в виду именно **S3-объектное хранение** (не снапшоты), в базе нет тарифа с ценой за ГБ/мес — уточните, пожалуйста, что именно вы используете (S3 storage или snapshots).",
+          "value": 1500.0,
+          "sources": [
+            "backup",
+            "tariffs"
+          ]
+        }
+      },
+      {
+        "q": "Сколько стоит отдать 300 ГБ исходящего трафика из S3 за месяц (только трафик)?",
+        "rep": 1,
+        "ok": true,
+        "tool_calls": 2,
+        "enough_tools": true,
+        "latency_s": 3.07,
+        "error": null,
+        "answer": {
+          "answer": "По тарифу S3: исходящий трафик — 1 ₽ за ГБ сверх 100 ГБ/мес. \nДля 300 ГБ за месяц: (300 − 100) × 1 ₽ = 200 ₽. \nИтого только за исходящий трафик: **200 ₽/мес**.",
+          "value": 200.0,
+          "sources": [
+            "[s3] Объектное хранилище S3: 1,9 ₽ за ГБ в месяц, исходящий трафик — 1 ₽ за ГБ сверх 100 ГБ в месяц, входящий бесплатно."
+          ]
+        }
+      },
+      {
+        "q": "Хранение 30 дней снапшотов объёмом 200 ГБ — сколько в месяц?",
+        "rep": 1,
+        "ok": true,
+        "tool_calls": 2,
+        "enough_tools": true,
+        "latency_s": 2.98,
+        "error": null,
+        "answer": {
+          "answer": "Хранение снапшотов 30 дней: 3 ₽ за ГБ в месяц. \n200 ГБ × 3 ₽ = **600 ₽ в месяц**.",
+          "value": 600.0,
+          "sources": [
+            "backup"
+          ]
+        }
+      },
+      {
+        "q": "Насколько дороже час L4, чем час T4, в рублях?",
+        "rep": 1,
+        "ok": true,
+        "tool_calls": 3,
+        "enough_tools": true,
+        "latency_s": 3.37,
+        "error": null,
+        "answer": {
+          "answer": "Час L4 дороже часа T4 на 23 ₽ (61 ₽/час vs 38 ₽/час), то есть примерно на 60,5%.",
+          "value": 23.0,
+          "sources": [
+            "gpu"
+          ]
+        }
+      },
+      {
+        "q": "Доступность на тарифе Бизнес упала до 99,7%. Какая компенсация в рублях?",
+        "rep": 1,
+        "ok": false,
+        "tool_calls": 2,
+        "enough_tools": true,
+        "latency_s": 3.47,
+        "error": null,
+        "answer": {
+          "answer": "По SLA для тарифа «Бизнес» целевая доступность — 99,95%. Падение до 99,7% означает отклонение на 0,25 п.п. Компенсация: 10% месячной стоимости за каждые начатые 0,1% ниже SLA, но не более 50%.\n\nМесячная стоимость «Бизнес» — 5900 ₽. Начатых интервалов по 0,1%: 0,25/0,1 = 2,5 → 3 интервала.\nКомпенсация = 3 × 10% × 5900 ₽ = 14750 ₽ (лимит 50% не превышен).",
+          "value": 14750.0,
+          "sources": [
+            "sla",
+            "tariffs"
+          ]
+        }
+      },
+      {
+        "q": "Можно ли арендовать GPU H100?",
+        "rep": 1,
+        "ok": true,
+        "tool_calls": 1,
+        "enough_tools": true,
+        "latency_s": 1.93,
+        "error": null,
+        "answer": {
+          "answer": "В базе знаний «Облачко» указаны арендуемые GPU: NVIDIA T4, NVIDIA L4 и NVIDIA A100 80GB. Про GPU H100 в доступных вариантах информации нет, поэтому подтвердить аренду H100 не могу.",
+          "value": null,
+          "sources": [
+            "gpu",
+            "regions"
+          ]
+        }
+      },
+      {
+        "q": "Сколько стоит тариф Старт и Про вместе в месяц?",
+        "rep": 1,
+        "ok": true,
+        "tool_calls": 2,
+        "enough_tools": true,
+        "latency_s": 2.65,
+        "error": null,
+        "answer": {
+          "answer": "Тарифы «Старт» (990 ₽/мес) и «Про» (2490 ₽/мес) вместе стоят 3480 ₽ в месяц.",
+          "value": 3480.0,
+          "sources": [
+            "tariffs"
+          ]
+        }
+      },
+      {
+        "q": "Есть ли у Облачко регион в Казани?",
+        "rep": 1,
+        "ok": true,
+        "tool_calls": 1,
+        "enough_tools": true,
+        "latency_s": 1.88,
+        "error": null,
+        "answer": {
+          "answer": "В базе знаний «Облачко» указаны регионы: Москва (msk-1, msk-2), Санкт-Петербург (spb-1) и Новосибирск (nsk-1). Про региона в Казани информации нет.",
+          "value": null,
+          "sources": [
+            "regions"
+          ]
+        }
+      }
+    ]
+  }
+]
